@@ -1,0 +1,700 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>Helpers - Connect Four Lab Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.ba0fd1a6.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#check_winner" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Connect Four Lab Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Connect Four Lab Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Helpers
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Connect Four Lab Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../gettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="LICENSE" class="md-nav__link">
+      LICENSE
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Game
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Game
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../game/" title="Game" class="md-nav__link">
+      Game
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../timer/" title="Timer" class="md-nav__link">
+      Timer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Helpers
+      </label>
+    
+    <a href="./" title="Helpers" class="md-nav__link md-nav__link--active">
+      Helpers
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check_winner" title="check_winner" class="md-nav__link">
+    check_winner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit_board_split" title="bit_board_split" class="md-nav__link">
+    bit_board_split
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next_position" title="next_position" class="md-nav__link">
+    next_position
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available_positions" title="available_positions" class="md-nav__link">
+    available_positions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seconds_to_hms" title="seconds_to_hms" class="md-nav__link">
+    seconds_to_hms
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Agents
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Agents
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Agents/base/" title="Base class" class="md-nav__link">
+      Base class
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Agents/trainers/" title="Trainers" class="md-nav__link">
+      Trainers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Agents/agents/" title="List of Agents" class="md-nav__link">
+      List of Agents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Agents/strategies/" title="List of Strategies" class="md-nav__link">
+      List of Strategies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Custom Widgets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Custom Widgets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CustomWidgets/selectionBox/" title="Selection Box" class="md-nav__link">
+      Selection Box
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CustomWidgets/confirmationPopUp/" title="Confirmation Pop-up" class="md-nav__link">
+      Confirmation Pop-up
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check_winner" title="check_winner" class="md-nav__link">
+    check_winner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit_board_split" title="bit_board_split" class="md-nav__link">
+    bit_board_split
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next_position" title="next_position" class="md-nav__link">
+    next_position
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available_positions" title="available_positions" class="md-nav__link">
+    available_positions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seconds_to_hms" title="seconds_to_hms" class="md-nav__link">
+    seconds_to_hms
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Helpers</h1>
+                
+                <h3 id="check_winner">check_winner</h3>
+<div class="codehilite"><pre><span></span><span class="n">check_winner</span><span class="p">(</span><span class="n">game_board</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Check if there is a winner in a given board</p>
+<p>Split the <code>game_board</code> for each player and check, 
+using binary operations, if there is a required 
+combination for a win.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><code>game_board</code> -  matrix (7x7), required</li>
+</ul>
+<p><strong>Return</strong></p>
+<ul>
+<li><code>1</code> -  id 1 is the winner</li>
+<li><code>-1</code> -  id -1 is the winner</li>
+<li><code>None</code> -  no winner in the giver table</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">board</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="kp">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">winner</span> <span class="o">=</span> <span class="n">check_winner</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">winner</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Winner id:&#39;</span><span class="p">,</span> <span class="n">winner</span><span class="p">)</span>
+</pre></div>
+
+
+<hr />
+<h3 id="bit_board_split">bit_board_split</h3>
+<div class="codehilite"><pre><span></span><span class="n">bit_board_split</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Split a given board in a bit board for each player</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><code>board</code> -  matrix (7x7), required</li>
+</ul>
+<p><strong>Return</strong></p>
+<p>Return a bit board of 56 of length, one for each player, which represents
+(in binary) the positions of the player on the board.</p>
+<hr />
+<h3 id="next_position">next_position</h3>
+<div class="codehilite"><pre><span></span><span class="n">next_position</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">column</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Return the next availabe position in a column</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><code>board</code> -  matrix, required</li>
+<li><code>column</code> -  int, required - Index of the column</li>
+</ul>
+<p><strong>Return</strong></p>
+<p>Index (row) of availabe position</p>
+<hr />
+<h3 id="available_positions">available_positions</h3>
+<div class="codehilite"><pre><span></span><span class="n">available_positions</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Yield all empty positions of a given board</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><code>board</code> -  matrix, required</li>
+</ul>
+<p><strong>Yield</strong></p>
+<p>Index of the column and row of all empty positions in the <code>board</code></p>
+<p><strong>Example</strong></p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">board</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">board</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">available_positions</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Column: {} - Row: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Position:&#39;</span><span class="p">,</span> <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">])</span>
+</pre></div>
+
+
+<hr />
+<h3 id="seconds_to_hms">seconds_to_hms</h3>
+<div class="codehilite"><pre><span></span><span class="n">seconds_to_hms</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Convert seconds in hour, minutes and seconds</p>
+<p><strong>Example</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">h</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">seconds_to_hms</span><span class="p">(</span><span class="mi">5401</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hour: {} Minutes: {} Seconds: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../timer/" title="Timer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Timer
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Agents/base/" title="Base class" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Base class
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

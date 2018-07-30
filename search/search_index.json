@@ -1,0 +1,574 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "CONNECT FOUR LAB - DOCUMENTATION\n\n\nConnect Four Lab is a platform to test AI algorithms in the connect four game.\n\n\nThe game\n\n\nThe game engine runs a 7x7 board which is a more competitive version than the classic 7x6 board.\n\n\nRepository\n\n\nRepository on GitHub\n\n\nGetting Started\n\n\nTo see a guide on where to start go to \nGetting Started\n\n\nRequirements\n\n\n\n\nnumpy\n\n\nKeras - Only to use Agents who requires neural network models\n\n\nWebsite & Documentation\n\n\nGithub\n\n\n\n\n\n\nKivy - Only to use the app\n\n\nWebsite\n\n\nDocumentation\n\n\nGithub\n\n\n\n\n\n\n\n\nStructure\n\n\nThe project is divided in two main packages 'game' and 'app'. The game package contains all the necessary modules to run a game (game engine, agents, models, helpers, etc). The app package is an user interface made in Kivy, in it you can run games see all turns being played, play yourself agains an Agent or train a new model.\n\n\nAgents\n\n\nIn Connect Four Lab each AI algorithm is called Agent.\n\n\nList of available agents:\n\n\n\n\nNegamax - \nabout\n\n\nSimulation - \nabout\n\n\nMonte Carlo Tree Search - \nabout\n\n\nMonte Carlo Tree Search with Neural Network - \nabout\n\n\n\n\nRelated projects\n\n\nThis project use other authorial projects:\n\n\n\n\nTimer - Powerful python timer with useful functions (Decorator, callback, contextmanager) and easy to use. \nsee on Github\n\n\nCustom Widgets for Kivy - \nsee on Github\n\n\n\n\nLicense\n\n\nThis project is licensed under the MIT License - see the \nLICENSE\n file for details\n\n\nDependencies\n\n\n\n\nKivy Licence\n - Only to use the app\n\n\nKeras Licence\n - Only to use Agents who requires neural network models",
+            "title": "Home"
+        },
+        {
+            "location": "/#connect-four-lab-documentation",
+            "text": "Connect Four Lab is a platform to test AI algorithms in the connect four game.",
+            "title": "CONNECT FOUR LAB - DOCUMENTATION"
+        },
+        {
+            "location": "/#the-game",
+            "text": "The game engine runs a 7x7 board which is a more competitive version than the classic 7x6 board.",
+            "title": "The game"
+        },
+        {
+            "location": "/#repository",
+            "text": "Repository on GitHub",
+            "title": "Repository"
+        },
+        {
+            "location": "/#getting-started",
+            "text": "To see a guide on where to start go to  Getting Started",
+            "title": "Getting Started"
+        },
+        {
+            "location": "/#requirements",
+            "text": "numpy  Keras - Only to use Agents who requires neural network models  Website & Documentation  Github    Kivy - Only to use the app  Website  Documentation  Github",
+            "title": "Requirements"
+        },
+        {
+            "location": "/#structure",
+            "text": "The project is divided in two main packages 'game' and 'app'. The game package contains all the necessary modules to run a game (game engine, agents, models, helpers, etc). The app package is an user interface made in Kivy, in it you can run games see all turns being played, play yourself agains an Agent or train a new model.",
+            "title": "Structure"
+        },
+        {
+            "location": "/#agents",
+            "text": "In Connect Four Lab each AI algorithm is called Agent.  List of available agents:   Negamax -  about  Simulation -  about  Monte Carlo Tree Search -  about  Monte Carlo Tree Search with Neural Network -  about",
+            "title": "Agents"
+        },
+        {
+            "location": "/#related-projects",
+            "text": "This project use other authorial projects:   Timer - Powerful python timer with useful functions (Decorator, callback, contextmanager) and easy to use.  see on Github  Custom Widgets for Kivy -  see on Github",
+            "title": "Related projects"
+        },
+        {
+            "location": "/#license",
+            "text": "This project is licensed under the MIT License - see the  LICENSE  file for details",
+            "title": "License"
+        },
+        {
+            "location": "/#dependencies",
+            "text": "Kivy Licence  - Only to use the app  Keras Licence  - Only to use Agents who requires neural network models",
+            "title": "Dependencies"
+        },
+        {
+            "location": "/gettingStarted/",
+            "text": "Getting Started\n\n\nThis project allow you to use an user interface (app package) or just execute games through code.\n\n\nCode only\n\n\nTo run a game you need to choose the Agents which will play the game and import the game engine. To learn how to do that follow the links bellow:\n\n\n\n\nGame engine - \nRunGame class\n\n\nAbout Agents - \nAgentBase Class\n\n\nAgents - \nList of Agents\n\n\n\n\nAPP\n\n\nTo start the App execute the file 'run_app.py' on the root directory.\n\n\nRunning a game\n\n\nClick in \"Play\" on the Main Menu\n\n\n[Image 1]\n\n\n\n\nSelect the Agents that you want playing.\nAgents who requires neural network models, you'll have to choose which trained model they're gonna use (see image 3 bellow).\nThe player one will be the white peaces, player two the blacks.\nThe first player to play will be randomly selected.\n\n\nYou can also select the time limit that the players will have to play the whole match.\nThe Timer Icon (see image 2 bellow) determine if the Agent are able to manage time limited matches. You can run time limited matches with Agents which don't manage time, but those with the risk of run out of time during the match which will give the win to the adversary.\n\n\n[Image 2]\n\n\n\n\n[Image 3]\n\n\n\n\nSome matches can finish immediately others can take minutes, depends on the match configuration.\n\n\nIn time limited matches you can see the clock running o the top left of the screen (see image 4 bellow).\n\n\nYou can navegate on the history of the match in the navebar on the botton of the screen.\n\n\nSee the message box on the bottom right of the screen to know what's happening.\n\n\n[Image 4]\n\n\n\n\nTraining a new model\n\n\nClick on \"Training\" on the main menu.\n\n\n[Image 5]\n\n\n\n\nSelect which trainer you want to execute. Read the description and set the variables if necessary. Click in \"Start Training\".\n\n\n[Image 6]\n\n\n\n\nWhile running the trainer the console screen will show log messages from the trainer. You can stop the training by clicking on the \"Cancel\" button, the trainer will receive a command to stop.\n\n\n[Image 7]\n\n\n\n\nAfter finish you can click on \"Play\" to be directed to the Game Configuration Screen.\n\n\n[Image 8]\n\n\n\n\nCreating a new Agent\n\n\nIt's easy to create a new Agent. To create a new agent, you only need to crete a new module on the \n/game/Agents/\n folder and create a class which inherit from AgentBase.\n\n\nTo create the new Agent class see the AgentBase class \ndocumentation\n to check which are the requirements and examples of implementations. Also start the name of the class with 'Agent' to be automatically detected by the APP and appear on the Configuration Screen.\n\n\nYou'll also wanna check the Strategies \ndocumentation\n which will help you creating variants of existing Agents and other algorithms.\n\n\nFor Agents which requires neural network models you'll want to create a \nTrainer",
+            "title": "Getting Started"
+        },
+        {
+            "location": "/gettingStarted/#getting-started",
+            "text": "This project allow you to use an user interface (app package) or just execute games through code.",
+            "title": "Getting Started"
+        },
+        {
+            "location": "/gettingStarted/#code-only",
+            "text": "To run a game you need to choose the Agents which will play the game and import the game engine. To learn how to do that follow the links bellow:   Game engine -  RunGame class  About Agents -  AgentBase Class  Agents -  List of Agents",
+            "title": "Code only"
+        },
+        {
+            "location": "/gettingStarted/#app",
+            "text": "To start the App execute the file 'run_app.py' on the root directory.",
+            "title": "APP"
+        },
+        {
+            "location": "/gettingStarted/#running-a-game",
+            "text": "Click in \"Play\" on the Main Menu  [Image 1]   Select the Agents that you want playing.\nAgents who requires neural network models, you'll have to choose which trained model they're gonna use (see image 3 bellow).\nThe player one will be the white peaces, player two the blacks.\nThe first player to play will be randomly selected.  You can also select the time limit that the players will have to play the whole match.\nThe Timer Icon (see image 2 bellow) determine if the Agent are able to manage time limited matches. You can run time limited matches with Agents which don't manage time, but those with the risk of run out of time during the match which will give the win to the adversary.  [Image 2]   [Image 3]   Some matches can finish immediately others can take minutes, depends on the match configuration.  In time limited matches you can see the clock running o the top left of the screen (see image 4 bellow).  You can navegate on the history of the match in the navebar on the botton of the screen.  See the message box on the bottom right of the screen to know what's happening.  [Image 4]",
+            "title": "Running a game"
+        },
+        {
+            "location": "/gettingStarted/#training-a-new-model",
+            "text": "Click on \"Training\" on the main menu.  [Image 5]   Select which trainer you want to execute. Read the description and set the variables if necessary. Click in \"Start Training\".  [Image 6]   While running the trainer the console screen will show log messages from the trainer. You can stop the training by clicking on the \"Cancel\" button, the trainer will receive a command to stop.  [Image 7]   After finish you can click on \"Play\" to be directed to the Game Configuration Screen.  [Image 8]",
+            "title": "Training a new model"
+        },
+        {
+            "location": "/gettingStarted/#creating-a-new-agent",
+            "text": "It's easy to create a new Agent. To create a new agent, you only need to crete a new module on the  /game/Agents/  folder and create a class which inherit from AgentBase.  To create the new Agent class see the AgentBase class  documentation  to check which are the requirements and examples of implementations. Also start the name of the class with 'Agent' to be automatically detected by the APP and appear on the Configuration Screen.  You'll also wanna check the Strategies  documentation  which will help you creating variants of existing Agents and other algorithms.  For Agents which requires neural network models you'll want to create a  Trainer",
+            "title": "Creating a new Agent"
+        },
+        {
+            "location": "/license/",
+            "text": "LICENSE\n\n\nThis project is licensed under the MIT License\n\n\nCopyright (c) 2018 Yuri Harrison\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
+            "title": "LICENSE"
+        },
+        {
+            "location": "/license/#license",
+            "text": "This project is licensed under the MIT License  Copyright (c) 2018 Yuri Harrison\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
+            "title": "LICENSE"
+        },
+        {
+            "location": "/Game/game/",
+            "text": "[source code]\n\n\nRunGame\n\n\nconnectFourLab\n.\ngame\n.\ngame\n.\nRunGame\n(\nplayer_one\n=\nNone\n,\n \nplayer_two\n=\nNone\n,\n \nfirst_player_randomized\n=\nTrue\n,\n \ntime_limit\n=\nNone\n,\n \nprint_result_on_console\n=\nFalse\n,\n \nstart\n=\nTrue\n,\n \nasync\n=\nFalse\n)\n\n\n\n\n\n\nRun matches of Connect Four (7x7)\n\n\nThis class uses \nAgents\n to take actions\neach turn and \nTimer\n to control the \ntime_limit\n.\n\n\nArguments\n\n\n\n\nplayer_one\n -  type or instance, optional, default \nNone\n\n\nType or instance of any \nAgentBase\n object\n\n\nIf \nNone\n the \nAgentRandom\n object will be assigned \n\n\n\n\n\n\nplayer_two\n -  same as \nplayer_one\n\n\nfirst_player_randomized\n -  bool, optional, default False\n\n\nDefines if the first turn will be randomized or the player one\n    will start the game\n\n\n\n\n\n\ntime_limit\n -  int, optional, default None\n\n\nDefines the limit of time each player have to play the match\n\n\nNone\n - Unlimited time\n\n\n\n\n\n\nprint_result_on_console\n -  bool, optional, default False\n\n\nDefines if in the end of the match the result will be printed\n    on the console. Good for debug.\n\n\n\n\n\n\nstart\n -  bool, optional, default True\n\n\nIf \nTrue\n the game will be started in the init or \n    else you have to call \nstart\n\n\n\n\n\n\nasync\n -  bool, optional, default False\n\n\nIf \nTrue\n the game will be run asynchronously\n\n\n\n\n\n\n\n\nAttributes\n\n\n\n\nGameStatus\n -  Enum -> (running, winner, tie, timeout, killed, exception)\n\n\nExample: RunGame.GameStatus.winner\n\n\n\n\n\n\nBOARD_FORMAT\n -  tuple, constant, value (7,7), define the board dimensions\n\n\nMAX_TURNS_POSSIBLE\n -  int, the maximum number of turns in a match\n\n\nwinner\n -  \nAgentBase\n object\n\n\nThe Agent winner of the last match, if the is one.\n\n\n\n\n\n\nstatus\n -  GameStatus, check the example(2) bellow\n\n\nNone\n - New instance, not started yet \n\n\nrunning\n - Game is running\n\n\nwinner\n - Last game ended with a winner\n\n\ntie\n - Last game ended in a tie\n\n\ntimeout\n - In the last game one of the players\n    left the time run out\n\n\nkilled\n - The game was stoped with the \nkill\n method\n\n\nexception\n - Exception during the game execution\n\n\n\n\n\n\n\n\nProperties\n\n\n\n\nis_running\n -  Return \nTrue\n if the game is currently running\n\n\n\n\nExeptions\n\n\n\n\nInvalidColumn\n -  raised when the agent return a column out of range\n    or a column already fulfilled\n\n\n\n\nExample 1\n\n\nfrom\n \nconnectFourLab.game\n \nimport\n \nRunGame\n\n\nRunGame\n(\nprint_result_on_console\n=\nTrue\n)\n\n\n\n\n\n\nExample 2\n\n\nimport\n \ntime\n\n\nfrom\n \nconnectFourLab.game\n \nimport\n \nRunGame\n\n\nfrom\n \nconnectFourLab.game.agents.monteCarlo\n \nimport\n \nAgentSimulation\n\n\n\ngame\n \n=\n \nRunGame\n(\nplayer_one\n=\nAgentSimulation\n,\n \nasync\n=\nTrue\n)\n\n\nwhile\n \ngame\n.\nis_running\n:\n\n    \ntime\n.\nsleep\n(\n1\n)\n\n\n\nif\n \ngame\n.\nstatus\n \n==\n \ngame\n.\nGameStatus\n.\ntie\n:\n\n    \nprint\n(\n'The game ended in a tie.'\n)\n\n\nelif\n \ngame\n.\nstatus\n \n==\n \ngame\n.\nGameStatus\n.\nwinner\n:\n\n    \nprint\n(\n'Winner:'\n,\n \ngame\n.\nwinner\n.\nname\n)\n\n\nelif\n \netc\n...\n\n\n\n\n\n\nUI implementation\n\n\nTo implement an User Interface you can override the events and\nimplement the \nget_human_input\n\n\nEvents\n\n\n\n\non_game_start\n -  Triggered when the game starts\n\n\non_new_turn\n -  Triggered when a new turn starts\n\n\non_end_turn\n -  Triggered when the turn ends\n\n\non_game_end\n -  Triggered when the game ends\n\n\n\n\nUser input\n\n\n\n\nget_human_input\n -  It's called by any AgentHuman in the match\n\n\n\n\nUI Attributes\n\n\n\n\nmemory\n -  list, register all turns data\n\n\nItem: (player_id, current_board, column_choosed)\n\n\n\n\n\n\nplayers\n -  dict, two Agents one for each player\n\n\nplayer one: id \n1\n - two: id \n-1\n\n\n\n\n\n\nclock\n -  dict, two clocks (\nChronometer\n or \nTimer\n) one for each player\n\n\nplayer one: id \n1\n - two: id \n-1\n\n\n\n\n\n\n\n\nUI Example\n\n\nSee \nGame Screen - Board class\n\n\n\n\nRunGame methods\n\n\nstart\n\n\nstart\n()\n\n\n\n\n\n\nStarts a new match\n\n\n\n\nkill\n\n\nkill\n()\n\n\n\n\n\n\nStop the current match.\n\n\nForce the game to stop and wait for the status confirmation.\n\n\n\n\nget_human_input\n\n\nget_human_input\n(\nplayer\n,\n \nboard\n)\n\n\n\n\n\n\nEvent game start\n\n\nTo be overridden by an UI.\n\n\nThis method will be called by every \nAgentHuman\n\npresent in the match, if the is one. This method\nshould return the user input, the player\ncolumn of choice.\n\n\nIf this method is not overridden, the \nAgentHuman\n\nwon't work\n\n\nArguments\n\n\n\n\nplayer\n -  \nAgentHuman\n, owner of the turn\n\n\nboard\n -  current state of the board\n\n\n\n\nReturn\n\n\nUser input, column of choice, as int 0-6\n\n\n\n\non_game_start\n\n\non_game_start\n()\n\n\n\n\n\n\nEvent game start\n\n\nTo be overridden by an UI. \nCalled in the beginning of a match.\n\n\n\n\non_game_end\n\n\non_game_end\n()\n\n\n\n\n\n\nEvent game end\n\n\nTo be overridden by an UI. \nCalled in the end of a match.\n\n\n\n\non_new_turn\n\n\non_new_turn\n(\nplayer\n,\n \nclock\n)\n\n\n\n\n\n\nEvent new turn\n\n\nTo be overridden by an UI.\nCalled in the beginning of each turn.\n\n\nArguments\n\n\n\n\nplayer\n -  \nAgentBase\n object, owner of the turn\n\n\nclock\n -  \nChronometer\n or \nTimer\n,\n    clock of the owner of the turn\n\n\n\n\n\n\non_end_turn\n\n\non_end_turn\n()\n\n\n\n\n\n\nEvent end turn\n\n\nTo be overridden by an UI. \nCalled in the end of a turn.",
+            "title": "Game"
+        },
+        {
+            "location": "/Game/game/#rungame",
+            "text": "connectFourLab . game . game . RunGame ( player_one = None ,   player_two = None ,   first_player_randomized = True ,   time_limit = None ,   print_result_on_console = False ,   start = True ,   async = False )   Run matches of Connect Four (7x7)  This class uses  Agents  to take actions\neach turn and  Timer  to control the  time_limit .  Arguments   player_one  -  type or instance, optional, default  None  Type or instance of any  AgentBase  object  If  None  the  AgentRandom  object will be assigned     player_two  -  same as  player_one  first_player_randomized  -  bool, optional, default False  Defines if the first turn will be randomized or the player one\n    will start the game    time_limit  -  int, optional, default None  Defines the limit of time each player have to play the match  None  - Unlimited time    print_result_on_console  -  bool, optional, default False  Defines if in the end of the match the result will be printed\n    on the console. Good for debug.    start  -  bool, optional, default True  If  True  the game will be started in the init or \n    else you have to call  start    async  -  bool, optional, default False  If  True  the game will be run asynchronously     Attributes   GameStatus  -  Enum -> (running, winner, tie, timeout, killed, exception)  Example: RunGame.GameStatus.winner    BOARD_FORMAT  -  tuple, constant, value (7,7), define the board dimensions  MAX_TURNS_POSSIBLE  -  int, the maximum number of turns in a match  winner  -   AgentBase  object  The Agent winner of the last match, if the is one.    status  -  GameStatus, check the example(2) bellow  None  - New instance, not started yet   running  - Game is running  winner  - Last game ended with a winner  tie  - Last game ended in a tie  timeout  - In the last game one of the players\n    left the time run out  killed  - The game was stoped with the  kill  method  exception  - Exception during the game execution     Properties   is_running  -  Return  True  if the game is currently running   Exeptions   InvalidColumn  -  raised when the agent return a column out of range\n    or a column already fulfilled   Example 1  from   connectFourLab.game   import   RunGame  RunGame ( print_result_on_console = True )   Example 2  import   time  from   connectFourLab.game   import   RunGame  from   connectFourLab.game.agents.monteCarlo   import   AgentSimulation  game   =   RunGame ( player_one = AgentSimulation ,   async = True )  while   game . is_running : \n     time . sleep ( 1 )  if   game . status   ==   game . GameStatus . tie : \n     print ( 'The game ended in a tie.' )  elif   game . status   ==   game . GameStatus . winner : \n     print ( 'Winner:' ,   game . winner . name )  elif   etc ...",
+            "title": "RunGame"
+        },
+        {
+            "location": "/Game/game/#ui-implementation",
+            "text": "To implement an User Interface you can override the events and\nimplement the  get_human_input  Events   on_game_start  -  Triggered when the game starts  on_new_turn  -  Triggered when a new turn starts  on_end_turn  -  Triggered when the turn ends  on_game_end  -  Triggered when the game ends   User input   get_human_input  -  It's called by any AgentHuman in the match   UI Attributes   memory  -  list, register all turns data  Item: (player_id, current_board, column_choosed)    players  -  dict, two Agents one for each player  player one: id  1  - two: id  -1    clock  -  dict, two clocks ( Chronometer  or  Timer ) one for each player  player one: id  1  - two: id  -1     UI Example  See  Game Screen - Board class",
+            "title": "UI implementation"
+        },
+        {
+            "location": "/Game/game/#rungame-methods",
+            "text": "",
+            "title": "RunGame methods"
+        },
+        {
+            "location": "/Game/game/#start",
+            "text": "start ()   Starts a new match",
+            "title": "start"
+        },
+        {
+            "location": "/Game/game/#kill",
+            "text": "kill ()   Stop the current match.  Force the game to stop and wait for the status confirmation.",
+            "title": "kill"
+        },
+        {
+            "location": "/Game/game/#get_human_input",
+            "text": "get_human_input ( player ,   board )   Event game start  To be overridden by an UI.  This method will be called by every  AgentHuman \npresent in the match, if the is one. This method\nshould return the user input, the player\ncolumn of choice.  If this method is not overridden, the  AgentHuman \nwon't work  Arguments   player  -   AgentHuman , owner of the turn  board  -  current state of the board   Return  User input, column of choice, as int 0-6",
+            "title": "get_human_input"
+        },
+        {
+            "location": "/Game/game/#on_game_start",
+            "text": "on_game_start ()   Event game start  To be overridden by an UI. \nCalled in the beginning of a match.",
+            "title": "on_game_start"
+        },
+        {
+            "location": "/Game/game/#on_game_end",
+            "text": "on_game_end ()   Event game end  To be overridden by an UI. \nCalled in the end of a match.",
+            "title": "on_game_end"
+        },
+        {
+            "location": "/Game/game/#on_new_turn",
+            "text": "on_new_turn ( player ,   clock )   Event new turn  To be overridden by an UI.\nCalled in the beginning of each turn.  Arguments   player  -   AgentBase  object, owner of the turn  clock  -   Chronometer  or  Timer ,\n    clock of the owner of the turn",
+            "title": "on_new_turn"
+        },
+        {
+            "location": "/Game/game/#on_end_turn",
+            "text": "on_end_turn ()   Event end turn  To be overridden by an UI. \nCalled in the end of a turn.",
+            "title": "on_end_turn"
+        },
+        {
+            "location": "/Game/timer/",
+            "text": "[source code]\n\n\nTimer\n\n\nconnectFourLab\n.\ngame\n.\ntimer\n.\nTimer\n(\ntime\n,\n \ncallback\n=\nNone\n)\n\n\n\n\n\n\nCountdown Timer with callback\n\n\nTimer inherit from \nChronometer\n\n\nArguments\n\n\n\n\ntime\n -  int, required\n\n\nStart of the countdown in seconds\n\n\n\n\n\n\ncallback\n -  function, optional, default \nNone\n\n\nFunction to be triggered when the countdown hits zero\n\n\n\n\n\n\n\n\nProperties\n\n\n\n\ntime_left\n -  float, time left in seconds\n\n\n\n\nExample\n\n\nimport\n \ntime\n\n\n\ndef\n \ntime_out\n():\n\n    \nprint\n(\n'Time out!'\n)\n\n\n\ntimer\n \n=\n \nTimer\n(\n30\n,\n \ncallback\n=\ntime_out\n)\n\n\n\nwith\n \ntimer\n:\n\n    \nassert\n \ntimer\n.\nrunning\n\n    \nprint\n(\n'Burning 10 seconds...'\n)\n\n    \ntime\n.\nsleep\n(\n10\n)\n\n\n\nassert\n \nnot\n \ntimer\n.\nrunning\n\n\n\nprint\n(\n'Time left:'\n,\n \ntimer\n.\ntime_left\n)\n\n\nprint\n(\n'Waiting without running the clock...'\n)\n\n\ntime\n.\nsleep\n(\n10\n)\n\n\nprint\n(\n'Time left:'\n,\n \ntimer\n.\ntime_left\n)\n\n\n\nwith\n \ntimer\n:\n\n    \nprint\n(\n'Running the clock till timeout'\n)\n\n    \nwhile\n \ntimer\n.\nrunning\n:\n\n        \nprint\n(\n'> + 15 seconds...'\n)\n\n        \ntime\n.\nsleep\n(\n15\n)\n\n\n\nprint\n(\n'Finished!'\n)\n\n\n\n\n\n\n\n\nTimer methods\n\n\nstart\n\n\nstart\n()\n\n\n\n\n\n\nStarts the countdown and starts the thread (\n_time_out\n method)\nwhich will trigger the \ncallback\n\n\n\n\nstop\n\n\nstop\n()\n\n\n\n\n\n\nStops the countdown and stops the running thread\n\n\n\n\n[source code]\n\n\nChronometer\n\n\nconnectFourLab\n.\ngame\n.\ntimer\n.\nChronometer\n()\n\n\n\n\n\n\nSimple chronometer with context manager support\n\n\nProperties\n\n\n\n\npartial\n -  float, current couting in seconds\n\n\nrunning\n -  boolean, chronometer current state\n\n\n\n\nExample\n\n\nimport\n \ntime\n\n\n\nchr\n \n=\n \nChronometer\n()\n\n\nchr\n.\nstart\n()\n\n\ntime\n.\nsleep\n(\n5\n)\n\n\nprint\n(\n'Partial:'\n,\n \nchr\n.\npartial\n)\n\n\nchr\n.\nstop\n()\n\n\nassert\n \nnot\n \nchr\n.\nrunning\n\n\nchr\n.\nreset\n()\n\n\n\n# or use with the context manager\n\n\n\nwith\n \nChronometer\n()\n \nas\n \nchr\n:\n\n    \nassert\n \nchr\n.\nrunning\n\n    \ntime\n.\nsleep\n(\n5\n)\n\n    \nprint\n(\n'Partial:'\n,\n \nchr\n.\npartial\n)\n\n\n\n\n\n\n\n\nChronometer methods\n\n\nstart\n\n\nstart\n()\n\n\n\n\n\n\nStarts the chronometer or resume the latest stop\n\n\n\n\nstop\n\n\nstop\n(\nreset\n=\nFalse\n)\n\n\n\n\n\n\nStops the chronometer\n\n\nArguments\n\n\n\n\nreset\n -  optional, boolean, default \nFalse\n\n\nTrue\n - Reset the chronometer to zero\n\n\nFalse\n - Maintain the current count\n\n\n\n\n\n\n\n\n\n\nreset\n\n\nreset\n()\n\n\n\n\n\n\nCall Chronometer.stop(reset=True)\n\n\n\n\n[source code]\n\n\nChronometerDecorator\n\n\nconnectFourLab\n.\ngame\n.\ntimer\n.\nChronometerDecorator\n(\nmethod\n=\nFalse\n,\n \nprint_sum\n=\nFalse\n)\n\n\n\n\n\n\nChronometer Decorator\n\n\nUse this decorator to measure time when executing functions\nor methods.\n\n\nExample\n\n\nimport\n \ntime\n\n\n\n\n@ChronometerDecorator\n()\n\n\ndef\n \nfoo\n(\nmsg\n):\n\n    \nprint\n(\nmsg\n)\n\n    \ntime\n.\nsleep\n(\n3\n)\n\n\n\n@ChronometerDecorator\n(\nprint_sum\n=\nTrue\n)\n\n\ndef\n \nbar\n():\n\n    \ntime\n.\nsleep\n(\n1\n)\n\n\n\nclass\n \nbaz\n:\n\n    \ndef\n \n__init__\n(\nself\n):\n\n        \nself\n.\nmessage\n \n=\n \n'Works on methods as well!'\n\n\n    \n@ChronometerDecorator\n(\nmethod\n=\nTrue\n)\n\n    \ndef\n \nqux\n(\nself\n):\n\n        \ntime\n.\nsleep\n(\n3\n)\n\n        \nprint\n(\nself\n.\nmessage\n)\n\n\n\nfoo\n(\n'Starting ChronometerDecorator test!'\n)\n\n\nfor\n \n_\n \nin\n \nrange\n(\n3\n):\n \nbar\n()\n\n\nbaz\n()\n.\nqux\n()\n\n\n\n''' Result example:\n\n\nStarting ChronometerDecorator test!\n\n\n[ChronometerDecorator]: Function foo > Time: 2.9994740292006554\n\n\n[ChronometerDecorator]: Function bar > Time: 1.000767622853573 - Total: 1.000767622853573\n\n\n[ChronometerDecorator]: Function bar > Time: 0.9999331681037802 - Total: 2.000700790957353\n\n\n[ChronometerDecorator]: Function bar > Time: 0.9999622418665695 - Total: 3.0006630328239225\n\n\nWorks on methods as well!\n\n\n[ChronometerDecorator]: Method qux > Time: 3.0000543717121673\n\n\n'''",
+            "title": "Timer"
+        },
+        {
+            "location": "/Game/timer/#timer",
+            "text": "connectFourLab . game . timer . Timer ( time ,   callback = None )   Countdown Timer with callback  Timer inherit from  Chronometer  Arguments   time  -  int, required  Start of the countdown in seconds    callback  -  function, optional, default  None  Function to be triggered when the countdown hits zero     Properties   time_left  -  float, time left in seconds   Example  import   time  def   time_out (): \n     print ( 'Time out!' )  timer   =   Timer ( 30 ,   callback = time_out )  with   timer : \n     assert   timer . running \n     print ( 'Burning 10 seconds...' ) \n     time . sleep ( 10 )  assert   not   timer . running  print ( 'Time left:' ,   timer . time_left )  print ( 'Waiting without running the clock...' )  time . sleep ( 10 )  print ( 'Time left:' ,   timer . time_left )  with   timer : \n     print ( 'Running the clock till timeout' ) \n     while   timer . running : \n         print ( '> + 15 seconds...' ) \n         time . sleep ( 15 )  print ( 'Finished!' )",
+            "title": "Timer"
+        },
+        {
+            "location": "/Game/timer/#timer-methods",
+            "text": "",
+            "title": "Timer methods"
+        },
+        {
+            "location": "/Game/timer/#start",
+            "text": "start ()   Starts the countdown and starts the thread ( _time_out  method)\nwhich will trigger the  callback",
+            "title": "start"
+        },
+        {
+            "location": "/Game/timer/#stop",
+            "text": "stop ()   Stops the countdown and stops the running thread   [source code]",
+            "title": "stop"
+        },
+        {
+            "location": "/Game/timer/#chronometer",
+            "text": "connectFourLab . game . timer . Chronometer ()   Simple chronometer with context manager support  Properties   partial  -  float, current couting in seconds  running  -  boolean, chronometer current state   Example  import   time  chr   =   Chronometer ()  chr . start ()  time . sleep ( 5 )  print ( 'Partial:' ,   chr . partial )  chr . stop ()  assert   not   chr . running  chr . reset ()  # or use with the context manager  with   Chronometer ()   as   chr : \n     assert   chr . running \n     time . sleep ( 5 ) \n     print ( 'Partial:' ,   chr . partial )",
+            "title": "Chronometer"
+        },
+        {
+            "location": "/Game/timer/#chronometer-methods",
+            "text": "",
+            "title": "Chronometer methods"
+        },
+        {
+            "location": "/Game/timer/#start_1",
+            "text": "start ()   Starts the chronometer or resume the latest stop",
+            "title": "start"
+        },
+        {
+            "location": "/Game/timer/#stop_1",
+            "text": "stop ( reset = False )   Stops the chronometer  Arguments   reset  -  optional, boolean, default  False  True  - Reset the chronometer to zero  False  - Maintain the current count",
+            "title": "stop"
+        },
+        {
+            "location": "/Game/timer/#reset",
+            "text": "reset ()   Call Chronometer.stop(reset=True)   [source code]",
+            "title": "reset"
+        },
+        {
+            "location": "/Game/timer/#chronometerdecorator",
+            "text": "connectFourLab . game . timer . ChronometerDecorator ( method = False ,   print_sum = False )   Chronometer Decorator  Use this decorator to measure time when executing functions\nor methods.  Example  import   time  @ChronometerDecorator ()  def   foo ( msg ): \n     print ( msg ) \n     time . sleep ( 3 )  @ChronometerDecorator ( print_sum = True )  def   bar (): \n     time . sleep ( 1 )  class   baz : \n     def   __init__ ( self ): \n         self . message   =   'Works on methods as well!' \n\n     @ChronometerDecorator ( method = True ) \n     def   qux ( self ): \n         time . sleep ( 3 ) \n         print ( self . message )  foo ( 'Starting ChronometerDecorator test!' )  for   _   in   range ( 3 ):   bar ()  baz () . qux ()  ''' Result example:  Starting ChronometerDecorator test!  [ChronometerDecorator]: Function foo > Time: 2.9994740292006554  [ChronometerDecorator]: Function bar > Time: 1.000767622853573 - Total: 1.000767622853573  [ChronometerDecorator]: Function bar > Time: 0.9999331681037802 - Total: 2.000700790957353  [ChronometerDecorator]: Function bar > Time: 0.9999622418665695 - Total: 3.0006630328239225  Works on methods as well!  [ChronometerDecorator]: Method qux > Time: 3.0000543717121673  '''",
+            "title": "ChronometerDecorator"
+        },
+        {
+            "location": "/Game/helpers/",
+            "text": "check_winner\n\n\ncheck_winner\n(\ngame_board\n)\n\n\n\n\n\n\nCheck if there is a winner in a given board\n\n\nSplit the \ngame_board\n for each player and check, \nusing binary operations, if there is a required \ncombination for a win.\n\n\nArguments\n\n\n\n\ngame_board\n -  matrix (7x7), required\n\n\n\n\nReturn\n\n\n\n\n1\n -  id 1 is the winner\n\n\n-1\n -  id -1 is the winner\n\n\nNone\n -  no winner in the giver table\n\n\n\n\nExample\n\n\nimport\n \nnumpy\n \nas\n \nnp\n\n\nboard\n \n=\n \nnp\n.\nzeros\n((\n7\n,\n7\n),\n \ndtype\n=\nint\n)\n\n\nboard\n[\n1\n,\n0\n]\n \n=\n \n1\n\n\nboard\n[\n2\n,\n0\n]\n \n=\n \n1\n\n\nboard\n[\n3\n,\n0\n]\n \n=\n \n1\n\n\nboard\n[\n4\n,\n0\n]\n \n=\n \n1\n\n\nboard\n[\n3\n,\n1\n]\n \n=\n \n-\n1\n\n\nboard\n[\n3\n,\n2\n]\n \n=\n \n-\n1\n\n\nboard\n[\n3\n,\n3\n]\n \n=\n \n-\n1\n\n\n\nwinner\n \n=\n \ncheck_winner\n(\nboard\n)\n\n\nif\n \nwinner\n:\n\n    \nprint\n(\n'Winner id:'\n,\n \nwinner\n)\n\n\n\n\n\n\n\n\nbit_board_split\n\n\nbit_board_split\n(\nboard\n)\n\n\n\n\n\n\nSplit a given board in a bit board for each player\n\n\nArguments\n\n\n\n\nboard\n -  matrix (7x7), required\n\n\n\n\nReturn\n\n\nReturn a bit board of 56 of length, one for each player, which represents\n(in binary) the positions of the player on the board.\n\n\n\n\nnext_position\n\n\nnext_position\n(\nboard\n,\n \ncolumn\n)\n\n\n\n\n\n\nReturn the next availabe position in a column\n\n\nArguments\n\n\n\n\nboard\n -  matrix, required\n\n\ncolumn\n -  int, required - Index of the column\n\n\n\n\nReturn\n\n\nIndex (row) of availabe position\n\n\n\n\navailable_positions\n\n\navailable_positions\n(\nboard\n)\n\n\n\n\n\n\nYield all empty positions of a given board\n\n\nArguments\n\n\n\n\nboard\n -  matrix, required\n\n\n\n\nYield\n\n\nIndex of the column and row of all empty positions in the \nboard\n\n\nExample\n\n\nimport\n \nnumpy\n \nas\n \nnp\n\n\nboard\n \n=\n \nnp\n.\nzeros\n((\n7\n,\n7\n),\n \ndtype\n=\nint\n)\n\n\nboard\n[\n0\n,\n0\n]\n \n=\n \n1\n\n\nboard\n[\n1\n,\n0\n]\n \n=\n \n-\n1\n\n\nboard\n[\n3\n,\n0\n]\n \n=\n \n1\n\n\nboard\n[\n3\n,\n1\n]\n \n=\n \n-\n1\n\n\nboard\n[\n6\n,\n0\n]\n \n=\n \n-\n1\n\n\n\nfor\n \nx\n,\n \ny\n \nin\n \navailable_positions\n(\nboard\n):\n\n    \nprint\n(\n'Column: {} - Row: {}'\n.\nformat\n(\nx\n,\n \ny\n))\n\n    \nprint\n(\n'Position:'\n,\n \nboard\n[\nx\n,\ny\n])\n\n\n\n\n\n\n\n\nseconds_to_hms\n\n\nseconds_to_hms\n(\nseconds\n)\n\n\n\n\n\n\nConvert seconds in hour, minutes and seconds\n\n\nExample\n\n\nh\n,\n \nm\n,\n \ns\n \n=\n \nseconds_to_hms\n(\n5401\n)\n\n\nprint\n(\n'Hour: {} Minutes: {} Seconds: {}'\n.\nformat\n(\nh\n,\n \nm\n,\n \ns\n))",
+            "title": "Helpers"
+        },
+        {
+            "location": "/Game/helpers/#check_winner",
+            "text": "check_winner ( game_board )   Check if there is a winner in a given board  Split the  game_board  for each player and check, \nusing binary operations, if there is a required \ncombination for a win.  Arguments   game_board  -  matrix (7x7), required   Return   1  -  id 1 is the winner  -1  -  id -1 is the winner  None  -  no winner in the giver table   Example  import   numpy   as   np  board   =   np . zeros (( 7 , 7 ),   dtype = int )  board [ 1 , 0 ]   =   1  board [ 2 , 0 ]   =   1  board [ 3 , 0 ]   =   1  board [ 4 , 0 ]   =   1  board [ 3 , 1 ]   =   - 1  board [ 3 , 2 ]   =   - 1  board [ 3 , 3 ]   =   - 1  winner   =   check_winner ( board )  if   winner : \n     print ( 'Winner id:' ,   winner )",
+            "title": "check_winner"
+        },
+        {
+            "location": "/Game/helpers/#bit_board_split",
+            "text": "bit_board_split ( board )   Split a given board in a bit board for each player  Arguments   board  -  matrix (7x7), required   Return  Return a bit board of 56 of length, one for each player, which represents\n(in binary) the positions of the player on the board.",
+            "title": "bit_board_split"
+        },
+        {
+            "location": "/Game/helpers/#next_position",
+            "text": "next_position ( board ,   column )   Return the next availabe position in a column  Arguments   board  -  matrix, required  column  -  int, required - Index of the column   Return  Index (row) of availabe position",
+            "title": "next_position"
+        },
+        {
+            "location": "/Game/helpers/#available_positions",
+            "text": "available_positions ( board )   Yield all empty positions of a given board  Arguments   board  -  matrix, required   Yield  Index of the column and row of all empty positions in the  board  Example  import   numpy   as   np  board   =   np . zeros (( 7 , 7 ),   dtype = int )  board [ 0 , 0 ]   =   1  board [ 1 , 0 ]   =   - 1  board [ 3 , 0 ]   =   1  board [ 3 , 1 ]   =   - 1  board [ 6 , 0 ]   =   - 1  for   x ,   y   in   available_positions ( board ): \n     print ( 'Column: {} - Row: {}' . format ( x ,   y )) \n     print ( 'Position:' ,   board [ x , y ])",
+            "title": "available_positions"
+        },
+        {
+            "location": "/Game/helpers/#seconds_to_hms",
+            "text": "seconds_to_hms ( seconds )   Convert seconds in hour, minutes and seconds  Example  h ,   m ,   s   =   seconds_to_hms ( 5401 )  print ( 'Hour: {} Minutes: {} Seconds: {}' . format ( h ,   m ,   s ))",
+            "title": "seconds_to_hms"
+        },
+        {
+            "location": "/Agents/base/",
+            "text": "[source code]\n\n\nAgentBase\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nbasicAgents\n.\nAgentBase\n()\n\n\n\n\n\n\nBase class Agent\n\n\nTo inherit from this class it's required to implement\nthe \naction\n method\n\n\ndef\n \naction\n(\nself\n,\n \nboard\n):\n\n    \n# choose a column based in a given board\n\n    \nreturn\n \nchosen_column\n \n# 0-6\n\n\n\n\n\n\nAttributes\n\n\n\n\nname\n -  str, required, name of the agent\n\n\ndescription\n -  str, required, description of the agent\n\n\nkind\n -  str, required, category of the agent\n\n\nmodel_key\n -  str, required for agents who uses\n    neural network models\n\n\nclock_management\n -  bool, optional, default \nFalse\n (*)\n\n\nflag that indicates whether or not the agent \n    can manage a time limit game\n\n\n\n\n\n\nrequire_nn_model\n -  bool, optional, default \nFalse\n (*)\n\n\nflag that indicates whether or not the agent\n    needs a neural network model\n\n\n\n\n\n\n\n\n(*) - only necessary in the \napp\n interface\n\n\nSaving the data\n\n\nYou can easily save the data from all turns of the game\nusing \nsave\n all data will be saved separately in:\n\n\n\n\ndata_scenario\n -  state of the board\n\n\ndata_action\n -  taken action\n\n\ndata_reward\n -  attributed reward\n\n\n\n\ndef\n \naction\n(\nself\n,\n \nboard\n):\n\n    \nchoice\n \n=\n \nself\n.\nrandom_choice\n(\nboard\n)\n\n    \nself\n.\nsave\n(\nboard\n,\n \nchoice\n)\n\n    \nreturn\n \nchoice\n\n\n\n\n\n\nException\n\n\n\n\nBadImplementation\n -  some class didn't implemented the\n    required method(s)\n\n\n\n\nClock management\n\n\nIf the game is time limited the \nupdate_clock\n will be\ncalled every turn and you will be able to manage the\n\nTimer\n (see \nTimer\n) in \nself.clock\n.\n\n\nUsing Neural Networks\n\n\nTo use neural network you need a \nTrainer\n\nwhich have to create and train a model for the agent.\n\n\nThe trained models are stored in the \ngame/models/\n folder.\n\nExample\n\n\n\n\nMCTSNN\n -  Monte Carlo Tree Search with Neural Network implementation -\n    see \ndocumentation",
+            "title": "Base class"
+        },
+        {
+            "location": "/Agents/base/#agentbase",
+            "text": "connectFourLab . game . agents . basicAgents . AgentBase ()   Base class Agent  To inherit from this class it's required to implement\nthe  action  method  def   action ( self ,   board ): \n     # choose a column based in a given board \n     return   chosen_column   # 0-6   Attributes   name  -  str, required, name of the agent  description  -  str, required, description of the agent  kind  -  str, required, category of the agent  model_key  -  str, required for agents who uses\n    neural network models  clock_management  -  bool, optional, default  False  (*)  flag that indicates whether or not the agent \n    can manage a time limit game    require_nn_model  -  bool, optional, default  False  (*)  flag that indicates whether or not the agent\n    needs a neural network model     (*) - only necessary in the  app  interface  Saving the data  You can easily save the data from all turns of the game\nusing  save  all data will be saved separately in:   data_scenario  -  state of the board  data_action  -  taken action  data_reward  -  attributed reward   def   action ( self ,   board ): \n     choice   =   self . random_choice ( board ) \n     self . save ( board ,   choice ) \n     return   choice   Exception   BadImplementation  -  some class didn't implemented the\n    required method(s)",
+            "title": "AgentBase"
+        },
+        {
+            "location": "/Agents/base/#clock-management",
+            "text": "If the game is time limited the  update_clock  will be\ncalled every turn and you will be able to manage the Timer  (see  Timer ) in  self.clock .",
+            "title": "Clock management"
+        },
+        {
+            "location": "/Agents/base/#using-neural-networks",
+            "text": "To use neural network you need a  Trainer \nwhich have to create and train a model for the agent.  The trained models are stored in the  game/models/  folder. Example   MCTSNN  -  Monte Carlo Tree Search with Neural Network implementation -\n    see  documentation",
+            "title": "Using Neural Networks"
+        },
+        {
+            "location": "/Agents/trainers/",
+            "text": "Trainers\n\n\nTrainers are responsable for create and train a neural network model to be used by an Agent. \n\n\nTrainers only appear on the App Training Config Screen if there are a description file in json format, along with the trainer module inside the \ngame/trainers/\n directory. The description file should be named the same as the module file.\n\n\nThe trained models have to be stored on \ngame/models/\n folder, if not, the APP won't be able to detect it. Also the name of the trained model have to start with the Agent \nmodel_key\n defined on the Agent class.\n\n\nDirectory structure\n\n\ngame/\n    trainers/\n        new_trainer.py\n        new_trainer.json\n    models/\n        model_name.h5\n\n\n\n\n\nJSON File example\n\n\n{\n\n    \n\"name\"\n:\n \n\"Name of the trainer\"\n,\n\n    \n\"short_description\"\n:\n \n\"short description\"\n,\n\n    \n\"description\"\n:\n \n\"full description\"\n\n\n}\n\n\n\n\n\n\nAPP Requirements\n\n\nTo work properly with the app the trainer must implement a function named \nstart\n which will receive as argument a function \nlog\n. The log function receive as argument a string which will be shown on the log screen in the app.\n\n\nIt's also required to implement the variables:\n- \nkwargs\n - dictionary, all kwargs informed by the user in the \"Variables\" on the Training Config Screen.\n- \nkill_training\n - boolean, flag setted to True when the user press the \"Cancel\" button on the Training Screen.\n\n\nExample\n\n\nkwargs\n \n=\n \nNone\n\n\nkill_training\n \n=\n \nFalse\n\n\n\ndef\n \nstart\n(\nlog\n):\n\n    \nlog\n(\n'Starting traning...'\n)\n\n\n    \nfor\n \nkw\n,\n \nvalue\n \nin\n \nkwargs\n.\nitems\n():\n\n        \nif\n \nkw\n \n==\n \n'quantity_games'\n:\n\n            \nquantity_games\n \n=\n \neval\n(\nvalue\n)\n\n\n    \n# ...\n\n\n\n\n\n\nTrainer Example\n\n\n\n\nEvaluation neural network\n\n\njson file\n\n\nmodule",
+            "title": "Trainers"
+        },
+        {
+            "location": "/Agents/trainers/#trainers",
+            "text": "Trainers are responsable for create and train a neural network model to be used by an Agent.   Trainers only appear on the App Training Config Screen if there are a description file in json format, along with the trainer module inside the  game/trainers/  directory. The description file should be named the same as the module file.  The trained models have to be stored on  game/models/  folder, if not, the APP won't be able to detect it. Also the name of the trained model have to start with the Agent  model_key  defined on the Agent class.  Directory structure  game/\n    trainers/\n        new_trainer.py\n        new_trainer.json\n    models/\n        model_name.h5  JSON File example  { \n     \"name\" :   \"Name of the trainer\" , \n     \"short_description\" :   \"short description\" , \n     \"description\" :   \"full description\"  }",
+            "title": "Trainers"
+        },
+        {
+            "location": "/Agents/trainers/#app-requirements",
+            "text": "To work properly with the app the trainer must implement a function named  start  which will receive as argument a function  log . The log function receive as argument a string which will be shown on the log screen in the app.  It's also required to implement the variables:\n-  kwargs  - dictionary, all kwargs informed by the user in the \"Variables\" on the Training Config Screen.\n-  kill_training  - boolean, flag setted to True when the user press the \"Cancel\" button on the Training Screen.  Example  kwargs   =   None  kill_training   =   False  def   start ( log ): \n     log ( 'Starting traning...' ) \n\n     for   kw ,   value   in   kwargs . items (): \n         if   kw   ==   'quantity_games' : \n             quantity_games   =   eval ( value ) \n\n     # ...",
+            "title": "APP Requirements"
+        },
+        {
+            "location": "/Agents/trainers/#trainer-example",
+            "text": "Evaluation neural network  json file  module",
+            "title": "Trainer Example"
+        },
+        {
+            "location": "/Agents/agents/",
+            "text": "[source code]\n\n\nAgentHuman\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nbasicAgents\n.\nAgentHuman\n()\n\n\n\n\n\n\nHuman Agent represents the user as a player\n\n\nWhen a UI implements \nRunGame\n it will\nassign a function to \nget_input\n which will be\ncalled each turn. The function should return \nthe column choosed by the user.\n\n\n\n\n[source code]\n\n\nAgentRandom\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nbasicAgents\n.\nAgentRandom\n()\n\n\n\n\n\n\nRandom agent, play a valid column chosen randonly\n\n\n\n\n[source code]\n\n\nAgentNegamax\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nnegamax\n.\nAgentNegamax\n()\n\n\n\n\n\n\nNegamax Agent\n\n\nThis agent uses the negamax algorithm which is a\nsimplified version of the minimax algorithm.\n\n\nNegamax is based on the observation that\n\nmax(a,b) = -min(-a,-b)\n\n\nThis agent uses negamax in all actions using the maximum\ndepth of \n5\n.\n\n\nIt also uses a \nzobrist hash table\n to store all searches in order\nto be more efficient.\n\n\n\n\n[source code]\n\n\nAgentSimulation\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nbasicAgents\n.\nAgentSimulation\n()\n\n\n\n\n\n\nSimulation agent\n\n\nWhen taking an action this agent simulates a number of\ngames for each available column and then choose the \nbest probabilistic option.\n\n\nThe best probabilistic option is the best score of a column,\nin a 100 simulated games.\n\n\nEach simulation consists in simulate every turn randomly for\nboth players until the simulation ends in a terminal state.\nThen it will return \n1\n for victory, \n-1\n for defeat or \n0\n\nin case of a draw.\n\n\n\n\n[source code]\n\n\nAgentSimulationTL\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nbasicAgents\n.\nAgentSimulationTL\n()\n\n\n\n\n\n\nSimulation strategy with time management\n\n\nThis agent act by simulating a number of\ngames for each available column and then choosing the \nbest probabilistic option.\n\n\nSimilar with the \nAgentSimulation\n. Differentiating\nitself by instead of simulating a fixed number of games,\nthis agent manage the time available through the game,\nsimulating the maximum amount of games (equaly distributed\nto all possible columns) without letting the time run out\nand thus being able to handle limited time games.\n\n\nIn unlimited time games the agents takes the maximum of\n20 seconds per turn before returning the choice.\n\n\n\n\n[source code]\n\n\nAgentMonteCarlo\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nbasicAgents\n.\nAgentMonteCarlo\n()\n\n\n\n\n\n\nMonte Carlo agent.\n\n\nThis agent applies the Monte Carlo Tree Search method.\nThe method consists in search the possibilities of\nthe board evaluating each stage of the board (rollout), but\ndifferent from a minimax tree search this search\ndon't go into all the possibilities, it uses the\nUCB1 algorithm to measure how much of the search effort\ngoes into exploiting promissing branches and exploring\nless prommissing branches.\n\n\nThis agent evaluate the rollout with a simulation\nof 100 games per board state.\n\n\n\n\n[source code]\n\n\nAgentMCTSNN\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nmctsnn\n.\nAgentMCTSNN\n(\nmodel_file\n=\nNone\n,\n \nmodel\n=\nNone\n)\n\n\n\n\n\n\nAgent Monte Carlo Tree Search with Neural Network evaluation.\n\n\nThis agent inherit from \nAgentMonteCarlo\n using the same\nprocess but evaluating the rollouts by using a trained\nneural network model.\n\n\nThis agent uses the Node \nNodeMCTSNN\n which evaluate the rollout\nscore by predicting the board state in a trained model.\n\n\nArguments\n\n\n\n\nmodel_file\n -  str; path to the '.h5' model file;\n\n\nmodel\n -  str, loaded \nkeras.models.Model\n object;\n\n\n\n\nExceptions\n\n\n\n\nMissingModel\n -  raise when creating a new instance, if\n    both model_file and model are None.",
+            "title": "List of Agents"
+        },
+        {
+            "location": "/Agents/agents/#agenthuman",
+            "text": "connectFourLab . game . agents . basicAgents . AgentHuman ()   Human Agent represents the user as a player  When a UI implements  RunGame  it will\nassign a function to  get_input  which will be\ncalled each turn. The function should return \nthe column choosed by the user.   [source code]",
+            "title": "AgentHuman"
+        },
+        {
+            "location": "/Agents/agents/#agentrandom",
+            "text": "connectFourLab . game . agents . basicAgents . AgentRandom ()   Random agent, play a valid column chosen randonly   [source code]",
+            "title": "AgentRandom"
+        },
+        {
+            "location": "/Agents/agents/#agentnegamax",
+            "text": "connectFourLab . game . agents . negamax . AgentNegamax ()   Negamax Agent  This agent uses the negamax algorithm which is a\nsimplified version of the minimax algorithm.  Negamax is based on the observation that max(a,b) = -min(-a,-b)  This agent uses negamax in all actions using the maximum\ndepth of  5 .  It also uses a  zobrist hash table  to store all searches in order\nto be more efficient.   [source code]",
+            "title": "AgentNegamax"
+        },
+        {
+            "location": "/Agents/agents/#agentsimulation",
+            "text": "connectFourLab . game . agents . basicAgents . AgentSimulation ()   Simulation agent  When taking an action this agent simulates a number of\ngames for each available column and then choose the \nbest probabilistic option.  The best probabilistic option is the best score of a column,\nin a 100 simulated games.  Each simulation consists in simulate every turn randomly for\nboth players until the simulation ends in a terminal state.\nThen it will return  1  for victory,  -1  for defeat or  0 \nin case of a draw.   [source code]",
+            "title": "AgentSimulation"
+        },
+        {
+            "location": "/Agents/agents/#agentsimulationtl",
+            "text": "connectFourLab . game . agents . basicAgents . AgentSimulationTL ()   Simulation strategy with time management  This agent act by simulating a number of\ngames for each available column and then choosing the \nbest probabilistic option.  Similar with the  AgentSimulation . Differentiating\nitself by instead of simulating a fixed number of games,\nthis agent manage the time available through the game,\nsimulating the maximum amount of games (equaly distributed\nto all possible columns) without letting the time run out\nand thus being able to handle limited time games.  In unlimited time games the agents takes the maximum of\n20 seconds per turn before returning the choice.   [source code]",
+            "title": "AgentSimulationTL"
+        },
+        {
+            "location": "/Agents/agents/#agentmontecarlo",
+            "text": "connectFourLab . game . agents . basicAgents . AgentMonteCarlo ()   Monte Carlo agent.  This agent applies the Monte Carlo Tree Search method.\nThe method consists in search the possibilities of\nthe board evaluating each stage of the board (rollout), but\ndifferent from a minimax tree search this search\ndon't go into all the possibilities, it uses the\nUCB1 algorithm to measure how much of the search effort\ngoes into exploiting promissing branches and exploring\nless prommissing branches.  This agent evaluate the rollout with a simulation\nof 100 games per board state.   [source code]",
+            "title": "AgentMonteCarlo"
+        },
+        {
+            "location": "/Agents/agents/#agentmctsnn",
+            "text": "connectFourLab . game . agents . mctsnn . AgentMCTSNN ( model_file = None ,   model = None )   Agent Monte Carlo Tree Search with Neural Network evaluation.  This agent inherit from  AgentMonteCarlo  using the same\nprocess but evaluating the rollouts by using a trained\nneural network model.  This agent uses the Node  NodeMCTSNN  which evaluate the rollout\nscore by predicting the board state in a trained model.  Arguments   model_file  -  str; path to the '.h5' model file;  model  -  str, loaded  keras.models.Model  object;   Exceptions   MissingModel  -  raise when creating a new instance, if\n    both model_file and model are None.",
+            "title": "AgentMCTSNN"
+        },
+        {
+            "location": "/Agents/strategies/",
+            "text": "Strategies\n\n\nStrategies are the classes with common algorithms that can be shared among multiple\n\nagents\n. It makes easy to implement variances or combine diferent strategies when creating an new agent.\n\n\nExample\n\n\n# inheriting from two strategy classes\n\n\nclass\n \nAgentSimulationTL\n(\nAgentBase\n,\n \nSimulationStrategy\n,\n \nTimerStrategy\n):\n\n    \nname\n \n=\n \n'Simulation TL'\n\n    \ndescription\n \n=\n \n'Simple simulation strategy (simulates managing the time limit)'\n\n    \nkind\n \n=\n \n'simulation'\n\n    \nclock_management\n \n=\n \nTrue\n\n\n    \n# picking a single method from a strategy class\n\n    \nchilds\n \n=\n \nTreeSearchStrategy\n.\nchilds\n\n\n    \ndef\n \naction\n(\nself\n,\n \nboard\n):\n\n        \n# applying the strategy method from TimerStrategy\n\n        \nrule\n \n=\n \nlambda\n \ntime_left\n:\n \ntime_left\n/\n(\n25\n-\nself\n.\nturn\n)\n\n        \nself\n.\nstart_timer\n(\nrule\n,\n \nmax\n=\n20\n)\n\n\n        \n...\n\n\n\n\n\n\n[source code]\n\n\nRandomStrategy\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nstrategies\n.\nrandom\n.\nRandomStrategy\n()\n\n\n\n\n\n\nRandom strategy\n\n\n\n\nRandomStrategy methods\n\n\nrandom_choice\n\n\nrandom_choice\n(\nboard\n)\n\n\n\n\n\n\nRandom choice. Return a valid column from a given\nboard state.\n\n\n\n\n[source code]\n\n\nTimerStrategy\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nstrategies\n.\ntimer\n.\nTimerStrategy\n()\n\n\n\n\n\n\nTimer strategy allow you to easily program\na timer to control the time of each turn.\n\n\nUsing the \nstart_timer\n method you can set a rule\nwhich will determine the start point of the timer\nand when the time expires the \ntime_out\n flag will\nbe changed to \nTrue\n.\n\n\nExample\n\n\nfrom\n \n.\n \nimport\n \nAgentBase\n\n\nfrom\n \n.strategies\n \nimport\n \nTimerStrategy\n\n\n\nclass\n \nAgentNew\n(\nAgentBase\n,\n \nTimerStrategy\n):\n\n\n    \ndef\n \naction\n(\nself\n,\n \nboard\n):\n\n        \nrule\n \n=\n \nlambda\n \ntime_left\n:\n \ntime_left\n/\n(\n25\n-\nself\n.\nturn\n)\n\n        \nself\n.\nstart_timer\n(\nrule\n,\n \nmax\n=\n20\n)\n\n\n        \nwhile\n \nnot\n \nself\n.\ntime_out\n:\n\n            \n# loop process\n\n\n        \nreturn\n \ncolumn\n\n\n\n\n\n\n\n\nTimerStrategy methods\n\n\nstart_timer\n\n\nstart_timer\n(\nrule\n,\n \nmax\n)\n\n\n\n\n\n\nSet the rule and starts the timer\n\n\nArguments\n\n\n\n\nrule\n -  lambda, required, rule which will determine\n    the time limit of the turn.\n\n\nmax\n -  float, required; maximum time allowed per turn.\n\n\n\n\n\n\n[source code]\n\n\nZobristHashingStrategy\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nstrategies\n.\ntreeSearch\n.\nZobristHashingStrategy\n()\n\n\n\n\n\n\nZobrist hashing table strategy provid an\neasy way to implement a hash table using the a board\nstate to crate the hash. Useful to store the data in\na tree search.\n\n\nExamples\n\n\n\n\nTreeSearchStrategy\n -  \ndocumentation\n\n\nNode\n -  \ndocumentation\n\n\n\n\n\n\nZobristHashingStrategy methods\n\n\ninit_zobrist\n\n\ninit_zobrist\n()\n\n\n\n\n\n\nInitialize Zobrist hashing table.\n\n\nThis method creates a list of two tables, filled\nrandomly with int64 numbers, to represent\nall possitions in a 7x7 board, one table for each\nplayer. It also generate two random int64 numbers\nwhich will represent the owner of a board state.\n\n\nBoth lists are used when generating a hash in the\n\nhash\n method.\n\n\n\n\nhash\n\n\nhash\n(\nboard\n,\n \ncolor\n)\n\n\n\n\n\n\nCreate a \nzobrist hash\n for a given board state.\n\n\nArguments:\n\n\n\n\nboard\n -  matrix, required, board state\n\n\ncolor\n -  int (1 or -1), required, owner of \n    the board state.\n\n\n\n\nReturn:\n\n\nGenerated zobrist hash.\n\n\n\n\nnext_random64\n\n\nnext_random64\n()\n\n\n\n\n\n\nReturn a random int64 number\n\n\n\n\n[source code]\n\n\nTreeSearchStrategy\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nstrategies\n.\ntreeSearch\n.\nTreeSearchStrategy\n()\n\n\n\n\n\n\nTree Search Strategy provide the necessary methods\nto an agent make a tree search in a given board state.\n\n\nExample\n\n\n\n\nAgentNegamax\n -  \ndocumentation\n\n\n\n\n\n\nTreeSearchStrategy methods\n\n\nnegamax\n\n\nnegamax\n(\nnode\n,\n \ndepth\n,\n \ncolor\n)\n\n\n\n\n\n\nNegamax algorithm\n\n\nThis algorithm, in order to be more efficiente, \nalso uses a \nZobrist hashing table\n to store\nthe values of board states and avoid duplicated\nsearches in equal board states in the same depth.\n\n\nArguments\n\n\n\n\nnode\n -  matrix, required, board state\n\n\ndepth\n -  int, required, number which controls the\n    depth limit that the recursive calls should hit\n\n\ncolor\n -  int (1 or -1), required, owner of the board state\n\n\n\n\nReturn\n\n\nBest value of a \nnode\n\n\n\n\nchilds\n\n\nchilds\n(\nnode\n,\n \ncolor\n=\n1\n)\n\n\n\n\n\n\nCreate an return the children of a given \nnode\n.\n\n\nThe children are generated from all available\npositions in a given \nboard\n\n\nArguments\n\n\n\n\nnode\n -  matrix, required, board state\n\n\ncolor\n -  int (1 or -1), optional, default 1\n    owner of the board state\n\n\n\n\nReturn\n\n\nList of children. Each item = (column, new_board_state)\n\n\n\n\nsave_search\n\n\nsave_search\n(\nboard\n,\n \nvalue\n,\n \ndepth\n,\n \ncolor\n)\n\n\n\n\n\n\nSave the data of a search in a \nzobrist hashing table\n.\n\n\nArguments:\n\n\n\n\nboard\n -  matrix, required, board state\n\n\nvalue\n -  int, value of the board state\n\n\ndepth\n -  int, current depth of the search\n\n\ncolor\n -  int (1 or -1), owner of the board state\n\n\n\n\n\n\nstored_value\n\n\nstored_value\n(\nboard\n,\n \ndepth\n,\n \ncolor\n)\n\n\n\n\n\n\nGet the stored value of a board state.\n\n\nSearch in the hash table if the is already a value\nstored for the \nboard\n and return the value if there is\none and if it's necessary to update the value.\n\n\nThe search is made on a \nZobrist hashing table\n.\n\n\nIt will require an update in the value stored when\nthe stored value depth is inferior to\nthe current search depth.\n\n\nArguments\n\n\n\n\nboard\n -  matrix, required, board state\n\n\ndepth\n -  int, required, current search depth\n\n\ncolor\n -  int (1 or -1), owner of the board state\n\n\n\n\nReturn\n\n\n\n\nvalue\n -  int, value of the given board if it finds one\n\n\nupdate\n -  boolean, \nTrue\n when the value stored needs to\n    be updated.\n\n\n\n\n\n\n[source code]\n\n\nSimulationStrategy\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nstrategies\n.\nmonteCarlo\n.\nSimulationStrategy\n()\n\n\n\n\n\n\nSimulation Stragegy provide the method necessary\nto simulate matches.\n\n\n\n\nSimulationStrategy methods\n\n\nsimulate\n\n\nsimulate\n(\nboard\n,\n \ncolor\n=-\n1\n)\n\n\n\n\n\n\nSimulate a match to the end from a given\nboard state. All turns are played randomly till\nthe board hits a terminal state then the value is\nreturned.\n\n\nArguments\n\n\n\n\nboard\n -  matrix, required, board state to be simulated\n\n\ncolor\n -  int, required, id of the owner of the board state\n\n\n\n\nReturn\n\n\nId of the winner of the simulation or zero in case\nthe simulation ends in a draw.\n\n\nExample\n\n\n\n\nAgentSimulation\n -  \ndocumentation\n\n\n\n\n\n\n[source code]\n\n\nNode\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nstrategies\n.\nmonteCarlo\n.\nNode\n(\nboard\n,\n \nmemory\n=\nNone\n,\n \nparent\n=\nNone\n,\n \nposition\n=\nNone\n,\n \ncolor\n=\n1\n)\n\n\n\n\n\n\nNode class is a base for a complex node for a Monte Carlo\nTree Searches.\n\n\nThis class has specific methods to perform the Monte Carlo Tree\nSearch.\n\n\nThis class \ndon't work on its own\n, because it doesn't have a\ndefault board evaluation algorithm. When inherited it's required\nto implement the \nrollout_score\n method which is an evaluation\nof a given state.\n\n\nThis class uses a \nzobrist hashing table\n to optimize the search.\n\n\nArguments\n\n\n\n\nboard\n -  matrix, required, board state\n\n\nmemory\n -  empty dictionary, required(*), default None\n\n\nthis dictionary will store all searches\n    with zobrist hashing.\n\n\n\n\n\n\nparent\n -  \nNode\n object, required (**), default None\n\n\nNode above in the tree hierarchy.\n\n\n\n\n\n\nposition\n -  int, required (**), default None\n\n\nIndex of the column which generated the board\n    current \nboard\n.\n\n\n\n\n\n\ncolor\n -  int, required (**), default 1\n\n\n\n\n(*) required when creating a new root \nNode\n object.\n\n\n(**) required when creating a new \"children\"\n\nNode\n object (\nnew_node\n method).\n\n\nProperties\n\n\n\n\nUCB1\n -  float, UCB1 value (*) of the node.\n\n\nvisits\n -  int, total number of Node visits\n\n\nvalue\n -  float, total number of score divided by the\n    number of visits\n\n\nthe total number of score is the sum of all\n    scores made by the Node and his children.\n\n\n\n\n\n\n\n\n(*) UBC1 is an algorithm which calculates the distribution\nof search effort for exploration and exploitation in\nthe Monte Carlo Tree Search strategy.\n\n\nExample\n\n\n\n\nAgentMonteCarlo\n -  \ndocumentation\n\n\nAgentMCTSNN\n -  \ndocumentation\n\n\n\n\n\n\nNode methods\n\n\nrollout\n\n\nrollout\n()\n\n\n\n\n\n\nNode rollout.\n\n\nIt will execute a rollout if this is the first\nvisits of the Node, otherwise it will return \nFalse\n.\n\n\nEach rollout adds a visit in the counter and the score\nof the \nboard\n to the Node and all the parents above\nin the tree.\n\n\nReturn\n\n\nTrue\n when the rollout occur, \nFalse\n when it do not.\n\n\n\n\nrollout_score\n\n\nrollout_score\n()\n\n\n\n\n\n\nThis method must return a score (float), evaluation, \nfor the Node board state (\nself.board\n), from the \nperspective of the player id 1.\n\n\nThis method is called every rollout. The rollout occur\nin the first visit of the Node, the value is stored in\nthe zobrist table and it is \nnot\n recalculated during the match.\n\n\nReturn\n\n\nfloat, score of the Node \nboard\n\n\n\n\nchildren\n\n\nchildren\n()\n\n\n\n\n\n\nGet all the childen Nodes.\n\n\nGenerate or get from the memory, all the childen\nNodes. Each node is generated from the available\npossitions in the \nboard\n of the current Node.\n\n\n\n\nnew_node\n\n\nnew_node\n(\nboard\n,\n \ncolumn\n)\n\n\n\n\n\n\nThis method is called by \nchildren\n method to\ngenerate a new Node.\n\n\nArguments:\n\n\n\n\nboard\n -  matrix, new board state\n\n\ncolumn\n -  int, index of the last column\n\n\n\n\nReturn\n\n\nA new instance of \nNode\n object.\n\n\n\n\n[source code]\n\n\nDepthMeasure\n\n\nconnectFourLab\n.\ngame\n.\nagents\n.\nstrategies\n.\nmonteCarlo\n.\nDepthMeasure\n()\n\n\n\n\n\n\nUse this class to help when measuring the depth of a\ntree search. Useful when debugging and measuring performance\noptimization.\n\n\nExample\n\n\nclass\n \nAgentNew\n(\nAgentBase\n,\n \nTimerStrategy\n)\n:\n\n\n    \ndef\n \naction\n(\nself\n,\n \nboard\n)\n:\n\n        \nDepthMeasure\n.\nstart\n()\n\n        \nself\n.\nstart_timer\n(...)\n\n\n        \nwhile\n \nnot\n \nself\n.\ntime_out\n:\n\n            \n#\n \nplace\n \nthe\n \nline\n \n\"DepthMeasure.add()\"\n \ninside\n \nthe\n\n            \n#\n \nsearch\n \nmethod\n,\n \nwhen\n \nit\n \ncreates\n \na\n \nnew\n \ndepth\n\n            \nself\n.\nrun_search\n()\n\n            \nDepthMeasure\n.\nreset\n()\n\n\n        \nDepthMeasure\n.\nprint\n()\n\n\n        \nreturn\n \n...\n\n\n\n\n\n\n\n\nDepthMeasure methods\n\n\nstart\n\n\nstart\n()\n\n\n\n\n\n\nReset all the variables to begin a new measurement.\n\n\n\n\nadd\n\n\nadd\n()\n\n\n\n\n\n\nAdd more 1 depth.\n\n\n\n\nreset\n\n\nreset\n()\n\n\n\n\n\n\nReset the depth before start a new search episode. Save the\ncurrent depth if it's the deepiest till know.\n\n\n\n\nprint\n\n\nprint\n()\n\n\n\n\n\n\nPrint the deepiest depth reached.",
+            "title": "List of Strategies"
+        },
+        {
+            "location": "/Agents/strategies/#strategies",
+            "text": "Strategies are the classes with common algorithms that can be shared among multiple agents . It makes easy to implement variances or combine diferent strategies when creating an new agent.",
+            "title": "Strategies"
+        },
+        {
+            "location": "/Agents/strategies/#example",
+            "text": "# inheriting from two strategy classes  class   AgentSimulationTL ( AgentBase ,   SimulationStrategy ,   TimerStrategy ): \n     name   =   'Simulation TL' \n     description   =   'Simple simulation strategy (simulates managing the time limit)' \n     kind   =   'simulation' \n     clock_management   =   True \n\n     # picking a single method from a strategy class \n     childs   =   TreeSearchStrategy . childs \n\n     def   action ( self ,   board ): \n         # applying the strategy method from TimerStrategy \n         rule   =   lambda   time_left :   time_left / ( 25 - self . turn ) \n         self . start_timer ( rule ,   max = 20 ) \n\n         ...   [source code]",
+            "title": "Example"
+        },
+        {
+            "location": "/Agents/strategies/#randomstrategy",
+            "text": "connectFourLab . game . agents . strategies . random . RandomStrategy ()   Random strategy",
+            "title": "RandomStrategy"
+        },
+        {
+            "location": "/Agents/strategies/#randomstrategy-methods",
+            "text": "",
+            "title": "RandomStrategy methods"
+        },
+        {
+            "location": "/Agents/strategies/#random_choice",
+            "text": "random_choice ( board )   Random choice. Return a valid column from a given\nboard state.   [source code]",
+            "title": "random_choice"
+        },
+        {
+            "location": "/Agents/strategies/#timerstrategy",
+            "text": "connectFourLab . game . agents . strategies . timer . TimerStrategy ()   Timer strategy allow you to easily program\na timer to control the time of each turn.  Using the  start_timer  method you can set a rule\nwhich will determine the start point of the timer\nand when the time expires the  time_out  flag will\nbe changed to  True .  Example  from   .   import   AgentBase  from   .strategies   import   TimerStrategy  class   AgentNew ( AgentBase ,   TimerStrategy ): \n\n     def   action ( self ,   board ): \n         rule   =   lambda   time_left :   time_left / ( 25 - self . turn ) \n         self . start_timer ( rule ,   max = 20 ) \n\n         while   not   self . time_out : \n             # loop process \n\n         return   column",
+            "title": "TimerStrategy"
+        },
+        {
+            "location": "/Agents/strategies/#timerstrategy-methods",
+            "text": "",
+            "title": "TimerStrategy methods"
+        },
+        {
+            "location": "/Agents/strategies/#start_timer",
+            "text": "start_timer ( rule ,   max )   Set the rule and starts the timer  Arguments   rule  -  lambda, required, rule which will determine\n    the time limit of the turn.  max  -  float, required; maximum time allowed per turn.    [source code]",
+            "title": "start_timer"
+        },
+        {
+            "location": "/Agents/strategies/#zobristhashingstrategy",
+            "text": "connectFourLab . game . agents . strategies . treeSearch . ZobristHashingStrategy ()   Zobrist hashing table strategy provid an\neasy way to implement a hash table using the a board\nstate to crate the hash. Useful to store the data in\na tree search.  Examples   TreeSearchStrategy  -   documentation  Node  -   documentation",
+            "title": "ZobristHashingStrategy"
+        },
+        {
+            "location": "/Agents/strategies/#zobristhashingstrategy-methods",
+            "text": "",
+            "title": "ZobristHashingStrategy methods"
+        },
+        {
+            "location": "/Agents/strategies/#init_zobrist",
+            "text": "init_zobrist ()   Initialize Zobrist hashing table.  This method creates a list of two tables, filled\nrandomly with int64 numbers, to represent\nall possitions in a 7x7 board, one table for each\nplayer. It also generate two random int64 numbers\nwhich will represent the owner of a board state.  Both lists are used when generating a hash in the hash  method.",
+            "title": "init_zobrist"
+        },
+        {
+            "location": "/Agents/strategies/#hash",
+            "text": "hash ( board ,   color )   Create a  zobrist hash  for a given board state.  Arguments:   board  -  matrix, required, board state  color  -  int (1 or -1), required, owner of \n    the board state.   Return:  Generated zobrist hash.",
+            "title": "hash"
+        },
+        {
+            "location": "/Agents/strategies/#next_random64",
+            "text": "next_random64 ()   Return a random int64 number   [source code]",
+            "title": "next_random64"
+        },
+        {
+            "location": "/Agents/strategies/#treesearchstrategy",
+            "text": "connectFourLab . game . agents . strategies . treeSearch . TreeSearchStrategy ()   Tree Search Strategy provide the necessary methods\nto an agent make a tree search in a given board state.  Example   AgentNegamax  -   documentation",
+            "title": "TreeSearchStrategy"
+        },
+        {
+            "location": "/Agents/strategies/#treesearchstrategy-methods",
+            "text": "",
+            "title": "TreeSearchStrategy methods"
+        },
+        {
+            "location": "/Agents/strategies/#negamax",
+            "text": "negamax ( node ,   depth ,   color )   Negamax algorithm  This algorithm, in order to be more efficiente, \nalso uses a  Zobrist hashing table  to store\nthe values of board states and avoid duplicated\nsearches in equal board states in the same depth.  Arguments   node  -  matrix, required, board state  depth  -  int, required, number which controls the\n    depth limit that the recursive calls should hit  color  -  int (1 or -1), required, owner of the board state   Return  Best value of a  node",
+            "title": "negamax"
+        },
+        {
+            "location": "/Agents/strategies/#childs",
+            "text": "childs ( node ,   color = 1 )   Create an return the children of a given  node .  The children are generated from all available\npositions in a given  board  Arguments   node  -  matrix, required, board state  color  -  int (1 or -1), optional, default 1\n    owner of the board state   Return  List of children. Each item = (column, new_board_state)",
+            "title": "childs"
+        },
+        {
+            "location": "/Agents/strategies/#save_search",
+            "text": "save_search ( board ,   value ,   depth ,   color )   Save the data of a search in a  zobrist hashing table .  Arguments:   board  -  matrix, required, board state  value  -  int, value of the board state  depth  -  int, current depth of the search  color  -  int (1 or -1), owner of the board state",
+            "title": "save_search"
+        },
+        {
+            "location": "/Agents/strategies/#stored_value",
+            "text": "stored_value ( board ,   depth ,   color )   Get the stored value of a board state.  Search in the hash table if the is already a value\nstored for the  board  and return the value if there is\none and if it's necessary to update the value.  The search is made on a  Zobrist hashing table .  It will require an update in the value stored when\nthe stored value depth is inferior to\nthe current search depth.  Arguments   board  -  matrix, required, board state  depth  -  int, required, current search depth  color  -  int (1 or -1), owner of the board state   Return   value  -  int, value of the given board if it finds one  update  -  boolean,  True  when the value stored needs to\n    be updated.    [source code]",
+            "title": "stored_value"
+        },
+        {
+            "location": "/Agents/strategies/#simulationstrategy",
+            "text": "connectFourLab . game . agents . strategies . monteCarlo . SimulationStrategy ()   Simulation Stragegy provide the method necessary\nto simulate matches.",
+            "title": "SimulationStrategy"
+        },
+        {
+            "location": "/Agents/strategies/#simulationstrategy-methods",
+            "text": "",
+            "title": "SimulationStrategy methods"
+        },
+        {
+            "location": "/Agents/strategies/#simulate",
+            "text": "simulate ( board ,   color =- 1 )   Simulate a match to the end from a given\nboard state. All turns are played randomly till\nthe board hits a terminal state then the value is\nreturned.  Arguments   board  -  matrix, required, board state to be simulated  color  -  int, required, id of the owner of the board state   Return  Id of the winner of the simulation or zero in case\nthe simulation ends in a draw.  Example   AgentSimulation  -   documentation    [source code]",
+            "title": "simulate"
+        },
+        {
+            "location": "/Agents/strategies/#node",
+            "text": "connectFourLab . game . agents . strategies . monteCarlo . Node ( board ,   memory = None ,   parent = None ,   position = None ,   color = 1 )   Node class is a base for a complex node for a Monte Carlo\nTree Searches.  This class has specific methods to perform the Monte Carlo Tree\nSearch.  This class  don't work on its own , because it doesn't have a\ndefault board evaluation algorithm. When inherited it's required\nto implement the  rollout_score  method which is an evaluation\nof a given state.  This class uses a  zobrist hashing table  to optimize the search.  Arguments   board  -  matrix, required, board state  memory  -  empty dictionary, required(*), default None  this dictionary will store all searches\n    with zobrist hashing.    parent  -   Node  object, required (**), default None  Node above in the tree hierarchy.    position  -  int, required (**), default None  Index of the column which generated the board\n    current  board .    color  -  int, required (**), default 1   (*) required when creating a new root  Node  object.  (**) required when creating a new \"children\" Node  object ( new_node  method).  Properties   UCB1  -  float, UCB1 value (*) of the node.  visits  -  int, total number of Node visits  value  -  float, total number of score divided by the\n    number of visits  the total number of score is the sum of all\n    scores made by the Node and his children.     (*) UBC1 is an algorithm which calculates the distribution\nof search effort for exploration and exploitation in\nthe Monte Carlo Tree Search strategy.  Example   AgentMonteCarlo  -   documentation  AgentMCTSNN  -   documentation",
+            "title": "Node"
+        },
+        {
+            "location": "/Agents/strategies/#node-methods",
+            "text": "",
+            "title": "Node methods"
+        },
+        {
+            "location": "/Agents/strategies/#rollout",
+            "text": "rollout ()   Node rollout.  It will execute a rollout if this is the first\nvisits of the Node, otherwise it will return  False .  Each rollout adds a visit in the counter and the score\nof the  board  to the Node and all the parents above\nin the tree.  Return  True  when the rollout occur,  False  when it do not.",
+            "title": "rollout"
+        },
+        {
+            "location": "/Agents/strategies/#rollout_score",
+            "text": "rollout_score ()   This method must return a score (float), evaluation, \nfor the Node board state ( self.board ), from the \nperspective of the player id 1.  This method is called every rollout. The rollout occur\nin the first visit of the Node, the value is stored in\nthe zobrist table and it is  not  recalculated during the match.  Return  float, score of the Node  board",
+            "title": "rollout_score"
+        },
+        {
+            "location": "/Agents/strategies/#children",
+            "text": "children ()   Get all the childen Nodes.  Generate or get from the memory, all the childen\nNodes. Each node is generated from the available\npossitions in the  board  of the current Node.",
+            "title": "children"
+        },
+        {
+            "location": "/Agents/strategies/#new_node",
+            "text": "new_node ( board ,   column )   This method is called by  children  method to\ngenerate a new Node.  Arguments:   board  -  matrix, new board state  column  -  int, index of the last column   Return  A new instance of  Node  object.   [source code]",
+            "title": "new_node"
+        },
+        {
+            "location": "/Agents/strategies/#depthmeasure",
+            "text": "connectFourLab . game . agents . strategies . monteCarlo . DepthMeasure ()   Use this class to help when measuring the depth of a\ntree search. Useful when debugging and measuring performance\noptimization.  Example  class   AgentNew ( AgentBase ,   TimerStrategy ) : \n\n     def   action ( self ,   board ) : \n         DepthMeasure . start () \n         self . start_timer (...) \n\n         while   not   self . time_out : \n             #   place   the   line   \"DepthMeasure.add()\"   inside   the \n             #   search   method ,   when   it   creates   a   new   depth \n             self . run_search () \n             DepthMeasure . reset () \n\n         DepthMeasure . print () \n\n         return   ...",
+            "title": "DepthMeasure"
+        },
+        {
+            "location": "/Agents/strategies/#depthmeasure-methods",
+            "text": "",
+            "title": "DepthMeasure methods"
+        },
+        {
+            "location": "/Agents/strategies/#start",
+            "text": "start ()   Reset all the variables to begin a new measurement.",
+            "title": "start"
+        },
+        {
+            "location": "/Agents/strategies/#add",
+            "text": "add ()   Add more 1 depth.",
+            "title": "add"
+        },
+        {
+            "location": "/Agents/strategies/#reset",
+            "text": "reset ()   Reset the depth before start a new search episode. Save the\ncurrent depth if it's the deepiest till know.",
+            "title": "reset"
+        },
+        {
+            "location": "/Agents/strategies/#print",
+            "text": "print ()   Print the deepiest depth reached.",
+            "title": "print"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/",
+            "text": "[source code]\n\n\nSelectionBox\n\n\nconnectFourLab\n.\napp\n.\nmyWidgets\n.\nselectionBox\n.\nSelectionBox\n()\n\n\n\n\n\n\nSelection Box is a widget which creates a box with\na list of \nSelectionBoxItem\n widgets generated from a\ngiven set of items and allow simple or multiple selection.\n\n\nIt's necessary to load the itens after set the \ndata\n. To do\nthat you have to call the method \nload_items\n.\n\n\nAttributes\n\n\n\n\norientation\n -  str, optional, default 'vertical'\n\n\nspacing\n -  NumericProperty, optional, default sp(5)\n\n\nmulti_selection\n -  bool, optional, default False -\n    set it to True to allow multi selection\n\n\nmodel\n -  str, optional, default 'SelectionBoxItem' -\n    name of the item \nSelectionBoxItem\n object\n\n\ndata\n -  list, required to generate the widget items -\n    list of any kind of object\n\n\n\n\nProperty\n\n\n\n\nselected_item\n -  \nSelectionBoxItem\n widget or a list of\n    \nSelectionBoxItem\n objects if multi selection is allowed\n\n\nprevious_item\n -  \nSelectionBoxItem\n widget, previous selected item\n\n\nselected_index\n -  int, index of the last item selected\n\n\nprevious_index\n -  int, index of the previous item selected\n\n\n\n\nEvents\n\n\n\n\non_selection_changed\n -  called every time a item is selected or\n    unselected\n\n\nadd a function using the kivy bind method\n\n\nargs: item\n\n\nitem - \nSelectionBoxItem\n widget selected\n\n\n\n\n\n\n\n\n\n\n\n\nExamples\n\n\nPython file\n\n\nfrom\n \nkivy.uix.relativelayout\n \nimport\n \nRelativeLayout\n\n\nfrom\n \nkivy.properties\n \nimport\n \nObjectProperty\n\n\n\nclass\n \nDataItem\n:\n\n    \ndef\n \n__init__\n(\nself\n,\n \ntext\n):\n\n        \nself\n.\ntext\n \n=\n \ntext\n\n\n\nBuilder\n.\nload_file\n(\n'main.kv'\n)\n\n\nclass\n \nMainScreen\n(\nRelativeLayout\n):\n\n    \nselection_box\n \n=\n \nObjectProperty\n(\nNone\n)\n\n\n    \ndef\n \non_selection_box\n(\nself\n,\n \ni\n,\n \nselection_box\n):\n\n        \ntext\n \n=\n \n'Item '\n\n        \ndata\n \n=\n \n[\nDataItem\n(\ntext\n \n+\n \nstr\n(\ni\n))\n \nfor\n \ni\n \nin\n \nrange\n(\n10\n)]\n\n\n        \nselection_box\n.\ndata\n \n=\n \ndata\n\n        \nselection_box\n.\nload_items\n()\n\n        \nselection_box\n.\nbind\n(\non_selection_changed\n=\nself\n.\non_selection_changed\n)\n\n\n    \ndef\n \non_selection_changed\n(\nself\n,\n \nsb\n,\n \nitem\n):\n\n        \nmsg\n \n=\n \n'[Item clicked]: Index - {} Text - \"{}\"'\n.\nformat\n(\nitem\n.\nindex\n,\n \nitem\n.\ndata\n.\ntext\n)\n\n        \nprint\n(\nmsg\n)\n\n\n\nclass\n \nMainApp\n(\nApp\n):\n\n\n    \ndef\n \nbuild\n(\nself\n):\n\n        \nreturn\n \nMainScreen\n()\n\n\n\n\nif\n \n__name__\n \n==\n \n\"__main__\"\n:\n\n    \nMainApp\n()\n.\nrun\n()\n\n\n\n\n\n\nKivy file\n\n\n#:kivy 1.0.0\n\n<SelectionBoxItem>:\n    # size_hint_y: None\n    height: sp(80)\n    color_normal: (.0,.2,.3,1) # dark blue\n    color_selected: (.0,.3,1,1) # bright blue\n\n    Label:\n        color: 0,0,0,1\n        text: root.data.text\n\n\n<MainScreen>:\n    selection_box: sb\n\n    RelativeLayout:\n        size_hint: (.3,.7)\n        pos_hint: {'center_x': .5, 'center_y': .5}\n\n        ScrollView:\n            canvas.before:\n                Color:\n                    rgba: 1,1,1,1\n                Rectangle:\n                    size: self.size\n                    pos: 0,0\n\n            SelectionBox:\n                id: sb\n                # spacing: sp(15)\n\n\n\n\n\nCustom item \nSelectionBoxItem\n widget\n\n\n<CustomItem@SelectionBoxItem>:\n    # customization...\n\n\n<MainScreen>:\n    selection_box: sb\n\n    RelativeLayout:\n        # ...\n\n        ScrollView:\n            # ...\n            SelectionBox:\n                id: sb\n                model: 'CustomItem'\n\n\n\n\n\n\n\nSelectionBox methods\n\n\nload_items\n\n\nload_items\n()\n\n\n\n\n\n\nGenerate \nSelectionBoxItem\n widgets with the\ndata setted on \nself.data\n. The widgets are added to\nthe box.\n\n\n\n\nselect\n\n\nselect\n(\nvalue\n,\n \nsilent\n=\nFalse\n)\n\n\n\n\n\n\nSelect an item in the box by informing the index\nor the \nSelectionBoxItem\n widget direcly.\n\n\nArguments\n\n\n\n\nvalue\n -  index or \nSelectionBoxItem\n, required\n\n\nsilent\n -  bool, optional, default False -\n    select the item quietly, without dispatch the \n    \non_selection_changed\n event\n\n\n\n\nException\n\n\n\n\nValueError\n -  raise when the \nvalue\n:\n\n\nindex - index out of range\n\n\nSelectionBoxItem\n - object don't match\n    any item in the box\n\n\n\n\n\n\n\n\n\n\nreset\n\n\nreset\n()\n\n\n\n\n\n\nReset the index variables and unselect all items.\n\n\n\n\n[source code]\n\n\nSelectionBoxItem\n\n\nconnectFourLab\n.\napp\n.\nmyWidgets\n.\nselectionBox\n.\nSelectionBoxItem\n(\nbox\n=\nNone\n,\n \ndata\n=\nNone\n)\n\n\n\n\n\n\nSelection Box Item is the widget generated for each\nitem setted in the \ndata\n attribute of \nSelectionBox\n.\n\n\nAttributes\n\n\n\n\ncolor_normal\n -  background color of the item\n\n\ncolor_selected\n -  background color of the item when selected\n\n\n\n\nProperty\n\n\n\n\nindex\n -  int, index of the item in the SelectionBox\n\n\ndata\n -  object, respective data item from \nSelectionBox.data",
+            "title": "Selection Box"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/#selectionbox",
+            "text": "connectFourLab . app . myWidgets . selectionBox . SelectionBox ()   Selection Box is a widget which creates a box with\na list of  SelectionBoxItem  widgets generated from a\ngiven set of items and allow simple or multiple selection.  It's necessary to load the itens after set the  data . To do\nthat you have to call the method  load_items .  Attributes   orientation  -  str, optional, default 'vertical'  spacing  -  NumericProperty, optional, default sp(5)  multi_selection  -  bool, optional, default False -\n    set it to True to allow multi selection  model  -  str, optional, default 'SelectionBoxItem' -\n    name of the item  SelectionBoxItem  object  data  -  list, required to generate the widget items -\n    list of any kind of object   Property   selected_item  -   SelectionBoxItem  widget or a list of\n     SelectionBoxItem  objects if multi selection is allowed  previous_item  -   SelectionBoxItem  widget, previous selected item  selected_index  -  int, index of the last item selected  previous_index  -  int, index of the previous item selected   Events   on_selection_changed  -  called every time a item is selected or\n    unselected  add a function using the kivy bind method  args: item  item -  SelectionBoxItem  widget selected",
+            "title": "SelectionBox"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/#examples",
+            "text": "Python file  from   kivy.uix.relativelayout   import   RelativeLayout  from   kivy.properties   import   ObjectProperty  class   DataItem : \n     def   __init__ ( self ,   text ): \n         self . text   =   text  Builder . load_file ( 'main.kv' )  class   MainScreen ( RelativeLayout ): \n     selection_box   =   ObjectProperty ( None ) \n\n     def   on_selection_box ( self ,   i ,   selection_box ): \n         text   =   'Item ' \n         data   =   [ DataItem ( text   +   str ( i ))   for   i   in   range ( 10 )] \n\n         selection_box . data   =   data \n         selection_box . load_items () \n         selection_box . bind ( on_selection_changed = self . on_selection_changed ) \n\n     def   on_selection_changed ( self ,   sb ,   item ): \n         msg   =   '[Item clicked]: Index - {} Text - \"{}\"' . format ( item . index ,   item . data . text ) \n         print ( msg )  class   MainApp ( App ): \n\n     def   build ( self ): \n         return   MainScreen ()  if   __name__   ==   \"__main__\" : \n     MainApp () . run ()   Kivy file  #:kivy 1.0.0\n\n<SelectionBoxItem>:\n    # size_hint_y: None\n    height: sp(80)\n    color_normal: (.0,.2,.3,1) # dark blue\n    color_selected: (.0,.3,1,1) # bright blue\n\n    Label:\n        color: 0,0,0,1\n        text: root.data.text\n\n\n<MainScreen>:\n    selection_box: sb\n\n    RelativeLayout:\n        size_hint: (.3,.7)\n        pos_hint: {'center_x': .5, 'center_y': .5}\n\n        ScrollView:\n            canvas.before:\n                Color:\n                    rgba: 1,1,1,1\n                Rectangle:\n                    size: self.size\n                    pos: 0,0\n\n            SelectionBox:\n                id: sb\n                # spacing: sp(15)  Custom item  SelectionBoxItem  widget  <CustomItem@SelectionBoxItem>:\n    # customization...\n\n\n<MainScreen>:\n    selection_box: sb\n\n    RelativeLayout:\n        # ...\n\n        ScrollView:\n            # ...\n            SelectionBox:\n                id: sb\n                model: 'CustomItem'",
+            "title": "Examples"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/#selectionbox-methods",
+            "text": "",
+            "title": "SelectionBox methods"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/#load_items",
+            "text": "load_items ()   Generate  SelectionBoxItem  widgets with the\ndata setted on  self.data . The widgets are added to\nthe box.",
+            "title": "load_items"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/#select",
+            "text": "select ( value ,   silent = False )   Select an item in the box by informing the index\nor the  SelectionBoxItem  widget direcly.  Arguments   value  -  index or  SelectionBoxItem , required  silent  -  bool, optional, default False -\n    select the item quietly, without dispatch the \n     on_selection_changed  event   Exception   ValueError  -  raise when the  value :  index - index out of range  SelectionBoxItem  - object don't match\n    any item in the box",
+            "title": "select"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/#reset",
+            "text": "reset ()   Reset the index variables and unselect all items.   [source code]",
+            "title": "reset"
+        },
+        {
+            "location": "/CustomWidgets/selectionBox/#selectionboxitem",
+            "text": "connectFourLab . app . myWidgets . selectionBox . SelectionBoxItem ( box = None ,   data = None )   Selection Box Item is the widget generated for each\nitem setted in the  data  attribute of  SelectionBox .  Attributes   color_normal  -  background color of the item  color_selected  -  background color of the item when selected   Property   index  -  int, index of the item in the SelectionBox  data  -  object, respective data item from  SelectionBox.data",
+            "title": "SelectionBoxItem"
+        },
+        {
+            "location": "/CustomWidgets/confirmationPopUp/",
+            "text": "[source code]\n\n\nConfirmationPopup\n\n\nkivy\n.\nuix\n.\nmodalview\n.\nConfirmationPopup\n()\n\n\n\n\n\n\nConfirmation Pop-up widget, inherit from Popup class.\n\n\nTo open it, just call the \nopen\n method. To get the user\nanswer bind a method to the \non_dismiss\n event and check\nthe \nresult\n property.\n\n\nAttributes\n\n\n\n\ntitle\n -  str, optional, default 'Are you sure?'; - \n    title of the pop-up\n\n\ndescription\n -  str, optional, default '' - \n    text located in the body of the pop-up\n\n\nbutton_continue_text\n -  str, optional, 'Continue' -\n    text of the continue button (left button)\n\n\nbutton_cancel_text\n -  str, optional, 'Cancel'\n    text of the cancel button (right button)\n\n\n\n\nProperty\n\n\n\n\nresult\n -  str, 'continue', 'cancel' or None, default None -\n    user answer to the pop-up\n\n\nNone\n - not answered\n\n\ncontinue\n - left button clicked\n\n\ncancel\n - right button clicked\n\n\n\n\n\n\n\n\nExample\n\n\nKivy file\n\n\n#:kivy 1.0.7\n<ConfirmationPopup>:\n    description: 'Do you want to close the application?'\n    button_continue_text: 'Yes'\n    button_cancel_text: 'No'\n\n<MainScreen>:\n    Button:\n        text: 'Close the application'\n        on_press: root.on_button_press()\n\n\n\n\n\nPython file\n\n\nfrom\n \nkivy.app\n \nimport\n \nApp\n\n\nfrom\n \nkivy.uix.relativelayout\n \nimport\n \nRelativeLayout\n\n\n\n\nclass\n \nMainScreen\n(\nRelativeLayout\n):\n\n\n    \ndef\n \non_button_press\n(\nself\n):\n\n        \npup\n \n=\n \nConfirmationPopup\n()\n\n        \npup\n.\nbind\n(\non_dismiss\n=\nself\n.\non_popup_dismiss\n)\n\n        \npup\n.\nopen\n()\n\n\n    \ndef\n \non_popup_dismiss\n(\nself\n,\n \npup\n):\n\n        \nif\n \npup\n.\nresult\n \n==\n \n'continue'\n:\n\n            \nApp\n.\nget_running_app\n()\n.\nstop\n()\n\n\n\n\nclass\n \nMainApp\n(\nApp\n):\n\n\n    \ndef\n \nbuild\n(\nself\n):\n\n        \nreturn\n \nMainScreen\n()\n\n\n\n\nif\n \n__name__\n \n==\n \n\"__main__\"\n:\n\n    \nMainApp\n()\n.\nrun\n()\n\n\n\n\n\n\n\n\n[source code]\n\n\nConfirmationPopupDecorator\n\n\nconnectFourLab\n.\napp\n.\nmyWidgets\n.\nconfirmationPopUp\n.\nConfirmationPopupDecorator\n(\nklass\n=<\nclass\n \n'\nconnectFourLab\n.\napp\n.\nmyWidgets\n.\nconfirmationPopUp\n.\nConfirmationPopup\n'>)\n\n\n\n\n\n\nConfirmation Popup Decorator\n\n\nThis class apply the ConfirmationPopup functionality to\nany method as a decorator.\n\n\nThis decorator can receive kwargs to easily customize the\npopup. See the examples bellow.\n\n\nExamples\n\n\nSimple aplication\n\n\nKivy file\n\n\n<ConfirmationPopup>:\n    description: 'Do you want to close the application?'\n    button_continue_text: 'Yes'\n    button_cancel_text: 'No'\n\n<MainScreen>:\n    Button:\n        text: 'Close the application'\n        on_press: root.on_button_press('Closing the app...')\n\n\n\n\n\nPython file\n\n\nclass\n \nMainScreen\n(\nRelativeLayout\n):\n\n\n    \n@ConfirmationPopupDecorator\n()\n\n    \ndef\n \non_button_press\n(\nself\n,\n \nmsg\n):\n\n        \nprint\n(\nmsg\n)\n\n        \nimport\n \ntime\n\n        \ntime\n.\nsleep\n(\n2\n)\n\n\n        \nApp\n.\nget_running_app\n()\n.\nstop\n()\n\n\n\n\n\n\nCustomizing\n\n\nSimple customization\n\n\nclass\n \nMainScreen\n(\nRelativeLayout\n):\n\n\n    \n@ConfirmationPopupDecorator\n(\ntitle\n=\n'Closing the app...'\n)\n\n    \ndef\n \non_button_press\n(\nself\n):\n\n        \nApp\n.\nget_running_app\n()\n.\nstop\n()\n\n\n\n\n\n\nMore customization\n\n\nclass\n \nMainScreen\n(\nRelativeLayout\n):\n\n    \nconfirmation_popup\n \n=\n \nConfirmationPopupDecorator\n(\n\n        \ntitle\n=\n'New title'\n,\n\n        \ndescription\n=\n'Description'\n,\n\n        \n# ... any attribute you want to modiffy\n\n    \n)\n\n\n    \n@confirmation_popup\n\n    \ndef\n \non_button_press\n(\nself\n):\n\n        \n# ...\n\n\n\n\n\n\nUsing a custom popup class\n\n\nclass\n \nMyCustomPopup\n(\nConfirmationPopup\n):\n\n    \n# ...\n\n\n\nclass\n \nMainScreen\n(\nRelativeLayout\n):\n\n\n    \n@ConfirmationPopupDecorator\n(\nMyCustomPopup\n)\n\n    \ndef\n \non_button_press\n(\nself\n):\n\n        \n# ...\n\n\n\n\n\n\nUsing a custom popup class and new kwargs\n\n\nclass\n \nMyCustomPopup\n(\nConfirmationPopup\n):\n\n\n    \ndef\n \n__init__\n(\nself\n,\n \nnew_kwarg\n=\nNone\n,\n \n**\nkw\n):\n\n        \nsuper\n()\n.\n__init__\n(\n**\nkw\n)\n\n        \n# ...\n\n\n\nclass\n \nMainScreen\n(\nRelativeLayout\n):\n\n    \ncustom_popup\n \n=\n \nConfirmationPopupDecorator\n(\n\n        \nklass\n=\nMyCustomPopup\n,\n\n        \nnew_kwarg\n=\n'value'\n\n    \n)\n\n\n    \n@custom_popup\n\n    \ndef\n \non_button_press\n(\nself\n):\n\n        \n# ...",
+            "title": "Confirmation Pop-up"
+        },
+        {
+            "location": "/CustomWidgets/confirmationPopUp/#confirmationpopup",
+            "text": "kivy . uix . modalview . ConfirmationPopup ()   Confirmation Pop-up widget, inherit from Popup class.  To open it, just call the  open  method. To get the user\nanswer bind a method to the  on_dismiss  event and check\nthe  result  property.  Attributes   title  -  str, optional, default 'Are you sure?'; - \n    title of the pop-up  description  -  str, optional, default '' - \n    text located in the body of the pop-up  button_continue_text  -  str, optional, 'Continue' -\n    text of the continue button (left button)  button_cancel_text  -  str, optional, 'Cancel'\n    text of the cancel button (right button)   Property   result  -  str, 'continue', 'cancel' or None, default None -\n    user answer to the pop-up  None  - not answered  continue  - left button clicked  cancel  - right button clicked",
+            "title": "ConfirmationPopup"
+        },
+        {
+            "location": "/CustomWidgets/confirmationPopUp/#example",
+            "text": "Kivy file  #:kivy 1.0.7\n<ConfirmationPopup>:\n    description: 'Do you want to close the application?'\n    button_continue_text: 'Yes'\n    button_cancel_text: 'No'\n\n<MainScreen>:\n    Button:\n        text: 'Close the application'\n        on_press: root.on_button_press()  Python file  from   kivy.app   import   App  from   kivy.uix.relativelayout   import   RelativeLayout  class   MainScreen ( RelativeLayout ): \n\n     def   on_button_press ( self ): \n         pup   =   ConfirmationPopup () \n         pup . bind ( on_dismiss = self . on_popup_dismiss ) \n         pup . open () \n\n     def   on_popup_dismiss ( self ,   pup ): \n         if   pup . result   ==   'continue' : \n             App . get_running_app () . stop ()  class   MainApp ( App ): \n\n     def   build ( self ): \n         return   MainScreen ()  if   __name__   ==   \"__main__\" : \n     MainApp () . run ()    [source code]",
+            "title": "Example"
+        },
+        {
+            "location": "/CustomWidgets/confirmationPopUp/#confirmationpopupdecorator",
+            "text": "connectFourLab . app . myWidgets . confirmationPopUp . ConfirmationPopupDecorator ( klass =< class   ' connectFourLab . app . myWidgets . confirmationPopUp . ConfirmationPopup '>)   Confirmation Popup Decorator  This class apply the ConfirmationPopup functionality to\nany method as a decorator.  This decorator can receive kwargs to easily customize the\npopup. See the examples bellow.",
+            "title": "ConfirmationPopupDecorator"
+        },
+        {
+            "location": "/CustomWidgets/confirmationPopUp/#examples",
+            "text": "",
+            "title": "Examples"
+        },
+        {
+            "location": "/CustomWidgets/confirmationPopUp/#simple-aplication",
+            "text": "Kivy file  <ConfirmationPopup>:\n    description: 'Do you want to close the application?'\n    button_continue_text: 'Yes'\n    button_cancel_text: 'No'\n\n<MainScreen>:\n    Button:\n        text: 'Close the application'\n        on_press: root.on_button_press('Closing the app...')  Python file  class   MainScreen ( RelativeLayout ): \n\n     @ConfirmationPopupDecorator () \n     def   on_button_press ( self ,   msg ): \n         print ( msg ) \n         import   time \n         time . sleep ( 2 ) \n\n         App . get_running_app () . stop ()",
+            "title": "Simple aplication"
+        },
+        {
+            "location": "/CustomWidgets/confirmationPopUp/#customizing",
+            "text": "Simple customization  class   MainScreen ( RelativeLayout ): \n\n     @ConfirmationPopupDecorator ( title = 'Closing the app...' ) \n     def   on_button_press ( self ): \n         App . get_running_app () . stop ()   More customization  class   MainScreen ( RelativeLayout ): \n     confirmation_popup   =   ConfirmationPopupDecorator ( \n         title = 'New title' , \n         description = 'Description' , \n         # ... any attribute you want to modiffy \n     ) \n\n     @confirmation_popup \n     def   on_button_press ( self ): \n         # ...   Using a custom popup class  class   MyCustomPopup ( ConfirmationPopup ): \n     # ...  class   MainScreen ( RelativeLayout ): \n\n     @ConfirmationPopupDecorator ( MyCustomPopup ) \n     def   on_button_press ( self ): \n         # ...   Using a custom popup class and new kwargs  class   MyCustomPopup ( ConfirmationPopup ): \n\n     def   __init__ ( self ,   new_kwarg = None ,   ** kw ): \n         super () . __init__ ( ** kw ) \n         # ...  class   MainScreen ( RelativeLayout ): \n     custom_popup   =   ConfirmationPopupDecorator ( \n         klass = MyCustomPopup , \n         new_kwarg = 'value' \n     ) \n\n     @custom_popup \n     def   on_button_press ( self ): \n         # ...",
+            "title": "Customizing"
+        }
+    ]
+}

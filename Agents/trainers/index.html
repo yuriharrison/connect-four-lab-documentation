@@ -1,0 +1,610 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>Trainers - Connect Four Lab Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.ba0fd1a6.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#trainers" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Connect Four Lab Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Connect Four Lab Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Trainers
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Connect Four Lab Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../gettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="LICENSE" class="md-nav__link">
+      LICENSE
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Game
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Game
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Game/game/" title="Game" class="md-nav__link">
+      Game
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Game/timer/" title="Timer" class="md-nav__link">
+      Timer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Game/helpers/" title="Helpers" class="md-nav__link">
+      Helpers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Agents
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Agents
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base/" title="Base class" class="md-nav__link">
+      Base class
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Trainers
+      </label>
+    
+    <a href="./" title="Trainers" class="md-nav__link md-nav__link--active">
+      Trainers
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#app-requirements" title="APP Requirements" class="md-nav__link">
+    APP Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trainer-example" title="Trainer Example" class="md-nav__link">
+    Trainer Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../agents/" title="List of Agents" class="md-nav__link">
+      List of Agents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../strategies/" title="List of Strategies" class="md-nav__link">
+      List of Strategies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Custom Widgets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Custom Widgets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CustomWidgets/selectionBox/" title="Selection Box" class="md-nav__link">
+      Selection Box
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CustomWidgets/confirmationPopUp/" title="Confirmation Pop-up" class="md-nav__link">
+      Confirmation Pop-up
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#app-requirements" title="APP Requirements" class="md-nav__link">
+    APP Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trainer-example" title="Trainer Example" class="md-nav__link">
+    Trainer Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="trainers">Trainers</h1>
+<p>Trainers are responsable for create and train a neural network model to be used by an Agent. </p>
+<p>Trainers only appear on the App Training Config Screen if there are a description file in json format, along with the trainer module inside the <code>game/trainers/</code> directory. The description file should be named the same as the module file.</p>
+<p>The trained models have to be stored on <code>game/models/</code> folder, if not, the APP won't be able to detect it. Also the name of the trained model have to start with the Agent <code>model_key</code> defined on the Agent class.</p>
+<p><strong>Directory structure</strong></p>
+<div class="codehilite"><pre><span></span>game/
+    trainers/
+        new_trainer.py
+        new_trainer.json
+    models/
+        model_name.h5
+</pre></div>
+
+
+<p><strong>JSON File example</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the trainer&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;short_description&quot;</span><span class="p">:</span> <span class="s2">&quot;short description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;full description&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="app-requirements">APP Requirements</h3>
+<p>To work properly with the app the trainer must implement a function named <code>start</code> which will receive as argument a function <code>log</code>. The log function receive as argument a string which will be shown on the log screen in the app.</p>
+<p>It's also required to implement the variables:
+- <code>kwargs</code> - dictionary, all kwargs informed by the user in the "Variables" on the Training Config Screen.
+- <code>kill_training</code> - boolean, flag setted to True when the user press the "Cancel" button on the Training Screen.</p>
+<p><strong>Example</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">kwargs</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">kill_training</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+    <span class="n">log</span><span class="p">(</span><span class="s1">&#39;Starting traning...&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">kw</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">kw</span> <span class="o">==</span> <span class="s1">&#39;quantity_games&#39;</span><span class="p">:</span>
+            <span class="n">quantity_games</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="c1"># ...</span>
+</pre></div>
+
+
+<h3 id="trainer-example">Trainer Example</h3>
+<ul>
+<li>Evaluation neural network<ul>
+<li><a href="https://github.com/yuriharrison/connect-four-lab/blob/master/connectFourLab/game/trainers/nn_evaluation.json">json file</a></li>
+<li><a href="https://github.com/yuriharrison/connect-four-lab/blob/master/connectFourLab/game/trainers/nn_evaluation.py">module</a></li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../base/" title="Base class" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Base class
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../agents/" title="List of Agents" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                List of Agents
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
